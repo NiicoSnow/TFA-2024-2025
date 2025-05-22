@@ -147,8 +147,11 @@ p{
     pointer-events: all;
 }
 
-.header__texte1 {
+h3 {
     font-weight: 700;
+    font-size: 20px;
+    margin-top:0px;
+    margin-bottom:28px;
 }
 .header__titre {
     margin-top:24px
@@ -182,4 +185,42 @@ p{
     position: relative;
     overflow: hidden;
     justify-items: center;
+}
+.section {
+    margin-bottom: 96px;
+}
+.section > *:last-child {
+    margin-bottom: 0;
+}
+.évidence{
+    font-weight: 500;
+    color: $bleu;
+}
+.Bigévidence{
+    font-size: 28px;
+    font-weight: 700;
+    color: $bleu;
+}
+.soundease__logo{
+    width: 50px;
+    margin-bottom:22px;
+    margin-left:6px;
+    margin-top:-6px
+}
+.soundease{
+    display: flex;
+}
+.barre{
+    height: 5px;
+    width: 75%;
+    background-color: $bleu;
+    justify-self: center;
+    border-radius: 999px;
+    box-shadow: 0 0px 20px $bleu;
+    margin-top:20px;
+    margin-bottom:48px
+}
+.boitierdemo{
+    width: 100%;
+    filter: drop-shadow(0 0px 10px $bleu);
 }
