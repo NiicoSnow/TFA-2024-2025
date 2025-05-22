@@ -20,6 +20,12 @@ h1 {
     line-height: 1.2;
     margin-bottom:48px;
 }
+h2{
+    line-height: 1.2;
+    margin-bottom:34px;
+    font-weight: 500;
+    font-size: 28px;
+}
 p{
     margin-top:0px;
     margin-bottom:28px;
@@ -166,4 +172,14 @@ p{
     color: $bleu;
     font-weight: 700;
     line-height: 1.2;
+    margin-bottom: 48px;
+}
+.écouteurdémo {
+    width: 150%;
+}
+.vidéo{
+    display: grid;
+    position: relative;
+    overflow: hidden;
+    justify-items: center;
 }
