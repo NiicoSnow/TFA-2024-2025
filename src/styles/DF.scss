@@ -4,7 +4,127 @@
 $noir: #0D1117;
 $bleu: #01DBE8;
 $blanc: #E0E0E0;
-
-body{
+body {
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0;
+    font-weight: 400;
     background-color: $noir;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding-left: 24px;
+    padding-right: 24px;
+    column-gap: 12px;
+}
+.grid > * {
+    grid-column: 1 / -1;
+}
+.header__nav {
+    display: flex;
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    background-color: #000000;
+    align-items: flex-end;
+    padding: 10px 24px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 2px $bleu;
+    position: relative;
+    justify-content: space-between;
+    height: 75px;
+}
+.header__nav-squeezie {
+    color: $blanc;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.menu__btn {
+    background: none;
+    border: none;
+    border-radius: 100%;
+    font-size: 24px;
+    cursor: pointer;
+    color: $blanc;
+    position: fixed;
+    right: 24px;
+    z-index: 10;
+    width: 54px;
+    height: 54px;
+}
+.menu__btn::before {
+    content: "☰";
+    font-size: 32px;
+    display: block;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 3px;
+}
+.menu--open .menu__btn::before {
+    content: "✕";
+}
+.menu__liste {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: $noir;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+    z-index: 5;
+    color: $bleu;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 24px;
+}
+.menu__el {
+    margin: 24px 0;
+    text-align: left;
+}
+.menu__link {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: $blanc;
+    transition: color 0.2s ease;
+}
+.menu__link:hover {
+    color: $bleu;
+}
+.menu--open .menu__liste {
+    transform: translateX(0);
+}
+.blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 4;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+.menu--open .blur-overlay {
+    opacity: 1;
+    pointer-events: all;
 }
