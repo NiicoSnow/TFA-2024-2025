@@ -9,8 +9,20 @@ body {
     font-size: 20px;
     line-height: 1.4;
     margin: 0;
-    font-weight: 400;
+    font-weight: 300;
     background-color: $noir;
+    color:$blanc
+}
+h1 {
+    color:$bleu;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom:48px;
+}
+p{
+    margin-top:0px;
+    margin-bottom:28px;
 }
 .grid {
     display: grid;
@@ -127,4 +139,31 @@ body {
 .menu--open .blur-overlay {
     opacity: 1;
     pointer-events: all;
+}
+
+.header__texte1 {
+    font-weight: 700;
+}
+.header__titre {
+    margin-top:24px
+}
+.btncmd{
+    background-color: $bleu;
+    color: $noir;
+    border: none;
+    height: 50px;
+    border-radius: 999px;
+    box-sizing: border-box;
+    box-shadow: 0 0px 20px $bleu;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: inherit;
+    margin-bottom:24px;
+}
+.btndécouvrir{
+    text-decoration: none;
+    color: $bleu;
+    font-weight: 700;
+    line-height: 1.2;
 }
