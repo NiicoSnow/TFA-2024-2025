@@ -224,3 +224,18 @@ h3 {
     width: 100%;
     filter: drop-shadow(0 0px 10px $bleu);
 }
+.caractéristiques__liste{
+    margin-top:0px;
+    margin-bottom:28px;
+}
+.caractéristiques_titre {
+    margin-bottom:0px;
+}
+.avis__commentaire{
+    border-radius: 25px;
+    border: 1px solid $bleu;
+}
+.avis__commentaire-date{
+    font-size: 14px;
+    color: #9E9E9E;
+}
