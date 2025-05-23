@@ -31,6 +31,10 @@ p{
     margin-top:0px;
     margin-bottom:28px;
 }
+img{
+    width: 100%;
+    filter: drop-shadow(0 0px 10px $bleu);
+}
 .grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -206,7 +210,8 @@ h3 {
     width: 50px;
     margin-bottom:22px;
     margin-left:6px;
-    margin-top:-6px
+    margin-top:-6px;
+    filter:none;
 }
 .soundease{
     display: flex;
@@ -221,10 +226,6 @@ h3 {
     margin-top:20px;
     margin-bottom:48px
 }
-.boitierdemo{
-    width: 100%;
-    filter: drop-shadow(0 0px 10px $bleu);
-}
 .caractéristiques__liste{
     margin-top:0px;
     margin-bottom:28px;
@@ -233,7 +234,7 @@ h3 {
 }
 .caractéristiques_titre {
     margin-bottom:0px;
-    margin-left:12px;
+    margin-left:0.5em;
 }
 .avis__commentaire{
     border-radius: 25px;
@@ -274,4 +275,94 @@ h3 {
 .avis__commentaire-réponse::before{
     content: "•";
     margin-right: 8px;
+}
+.statut {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 24px;
+}
+.statut__barre {
+  width: 12px;
+  height: 12px;
+  background-color: $bleu;
+  border-radius: 999px;
+}
+.active{
+    width: 24px;
+}
+.boutique__image-tout{
+    width: 75%;
+    justify-self: center;
+}
+.boutique__titre-produit{
+    text-align: center;
+    font-weight: 700;
+}
+.lowévidence{
+    font-weight: 500;
+}
+.boutique__rond{
+    display: flex;
+    gap: 0.5em;
+    grid-column: 1/ span 3;
+}
+.boutique__rond-noir{
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 999px;
+    border: 2px solid $bleu;
+}
+.boutique__rond-blanc{
+    width: 50px;
+    height: 50px;
+    background-color: #FFF;
+    border-radius: 999px;
+    border: 2px solid $bleu;
+}
+.boutique__prix{
+    grid-column: 5/ span 3;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: end;
+}
+.boutique__texte{
+    margin-bottom: 48px;
+}
+.boutique__btnpanier{
+    background-color: $bleu;
+    color: $noir;
+    border: none;
+    height: 70px;
+    border-radius: 999px;
+    box-sizing: border-box;
+    box-shadow: 0 0px 20px $bleu;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: inherit;
+    margin-bottom:24px;
+    grid-column: 2/span 5;
+}
+.boutique__barre {
+    height: 5px;
+    width: 100%;
+    background-color: $bleu;
+    justify-self: center;
+    border-radius: 999px;
+    box-shadow: 0 0px 20px $bleu;
+    margin-top:24px;
+    margin-bottom:48px;
+    grid-column: 1/-1;
+}
+.boutique__image-écouteurs{
+    width: 50%;
+    justify-self: center;
+}
+.boutique__titre-produit{
+    grid-column: 2/span 5;
+}
+.inséparable{
+    white-space: nowrap;
 }
