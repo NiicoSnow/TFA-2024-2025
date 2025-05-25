@@ -357,7 +357,7 @@ h3 {
     grid-column: 1/-1;
 }
 .boutique__image-écouteurs{
-    width: 50%;
+    width: 40%;
     justify-self: center;
 }
 .boutique__titre-produit{
@@ -365,4 +365,81 @@ h3 {
 }
 .inséparable{
     white-space: nowrap;
+}
+.boutique__texte-petiteboutique {
+    grid-column: 2/ span 5;
+    text-align: center;
+    margin-bottom: 48px;
+}
+.boutique__rond-petiteboutique {
+    display: flex;
+    gap: 0.5em;
+    justify-self: center;
+    margin-bottom:24px;
+}
+.boutique__prix-petiteboutique{
+    grid-column: 1/ span 3;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: end;
+    margin-top:6px;
+}
+.boutique__btnpanier-petiteboutique{
+    background-color: $bleu;
+    color: $noir;
+    border: none;
+    height: 50px;
+    border-radius: 999px;
+    box-sizing: border-box;
+    box-shadow: 0 0px 20px $bleu;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: inherit;
+    margin-bottom:48px;
+    grid-column: 4/span 3;
+}
+.boutique__image-boitier{
+    width: 50%;
+    justify-self: center;
+}
+.boutique__image-cable{
+    width: 50%;
+    justify-self: center;
+}
+.footer {
+    background-color: #000;
+    box-shadow: 0 -2px 2px #01DBE8;
+}
+.footer__marque{
+    color: $blanc;
+    font-weight: 300;
+    justify-self: center;
+    margin-bottom:0px;
+}
+.footer__barre{
+    height: 5px;
+    width: 100%;
+    background-color: $bleu;
+    justify-self: center;
+    border-radius: 999px;
+    box-shadow: 0 0px 20px $bleu;
+    margin-top:24px;
+    margin-bottom:48px;
+    grid-column: 3/ span 3;
+}
+.footer__texte{
+    margin-bottom:12px;
+}
+.footer__commander{
+    color: $bleu;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.footer__colonne2{
+    margin-bottom:12px;
+    grid-column: 2/span 5;
+}
+.footer__colonne1{
+    grid-column: 2/span 5;
 }
