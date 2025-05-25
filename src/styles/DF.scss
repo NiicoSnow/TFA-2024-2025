@@ -463,6 +463,9 @@ h3 {
     width: 50px;
     cursor: pointer;
 }
+.footer__logo:hover{
+    filter: drop-shadow(0 0px 5px $bleu);
+}
 .footer__copyright{
     grid-column: 2/span 5;
     font-size: 14px;
@@ -471,4 +474,7 @@ h3 {
 }
 .footer__li{
     margin-bottom:12px;
+}
+.footer__li:hover{
+    text-decoration: underline $bleu;
 }
