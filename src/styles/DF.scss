@@ -443,3 +443,19 @@ h3 {
 .footer__colonne1{
     grid-column: 2/span 5;
 }
+.footer__logos{
+    display: flex;
+    gap: 1em;
+    justify-self: center;
+    margin-bottom:24px;
+}
+.footer__logo{
+    filter:none;
+    width: 50px;
+}
+.footer__copyright{
+    grid-column: 2/span 5;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom:24px;
+}
