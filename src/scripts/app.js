@@ -78,21 +78,47 @@ carousel.addEventListener('touchend', (e) => {
 updateCarousel();
 
 window.addEventListener('DOMContentLoaded', () => {
-  const video = document.getElementById('ScrollVideo');
+  const canvas = document.getElementById("scrollCanvas");
+  const context = canvas.getContext("2d");
 
-  video.addEventListener('loadedmetadata', () => {
-    const duration = video.duration;
+  const frameCount = 125;
+  const currentFrame = index => `assets/images/frames/frame_${index.toString().padStart(4, '0')}.webp`;
 
-    gsap.to(video, {
-      currentTime: duration,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".scroll-video",
-        start: "top top",
-        end: "+=3000", // plus grand = scroll plus long
-        scrub: 1,      // ⚠️ utilise un petit lissage pour éviter les à-coups
-        pin: true
-      }
-    });
+  const images = [];
+  let img = new Image();
+  img.src = currentFrame(1);
+  images[0] = img;
+
+  for (let i = 1; i <= frameCount; i++) {
+    const img = new Image();
+    img.src = currentFrame(i);
+    images.push(img);
+  }
+
+  const updateImage = index => {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(images[index], 0, 0);
+  };
+
+  gsap.to({ frame: 0 }, {
+    frame: frameCount - 1,
+    snap: "frame",
+    ease: "none",
+    scrollTrigger: {
+      scrub: 1,
+      trigger: "#scrollCanvas",
+      start: "top top",
+      end: "+=3000",
+      pin: true
+    },
+    onUpdate: function () {
+      updateImage(Math.floor(this.targets()[0].frame));
+    }
   });
+
+  images[0].onload = () => {
+    canvas.width = images[0].width;
+    canvas.height = images[0].height;
+    updateImage(0);
+  };
 });
