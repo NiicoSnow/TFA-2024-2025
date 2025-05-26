@@ -11,7 +11,8 @@ body {
     margin: 0;
     font-weight: 300;
     background-color: $noir;
-    color:$blanc
+    color:$blanc;
+    overflow-x: hidden;
 }
 h1 {
     color:$bleu;
@@ -237,9 +238,13 @@ h3 {
     margin-left:0.5em;
 }
 .avis__commentaire{
+    padding: 24px 12px;
     border-radius: 25px;
     border: 1px solid $bleu;
-    margin-bottom:24px;
+    box-sizing: border-box;
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
 }
 .avis__commentaire-date{
     font-size: 14px;
@@ -248,10 +253,12 @@ h3 {
     line-height: 1.2;
     grid-column: 4/-1;
     text-align: end;
+    max-height: 50px;
 }
 .avis__commentaire-nom{
     margin-bottom:14px;
     font-weight: 500;
+    max-height: 50px;
 }
 .gridcom{
     display: grid;
@@ -271,10 +278,24 @@ h3 {
     font-weight: 200;
     display: flex;
     align-items: flex-start;
+    margin-left: 12px;
 }
 .avis__commentaire-réponse::before{
     content: "•";
     margin-right: 8px;
+}
+.avis {
+    display: flex;
+    transition: transform 0.4s ease;
+    width: 400%;
+    touch-action: pan-y;
+    gap: 24px;
+}
+.avis__commentaire-entete{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
 }
 .statut {
     display: flex;
@@ -283,13 +304,48 @@ h3 {
     margin-top: 24px;
 }
 .statut__barre {
-  width: 12px;
-  height: 12px;
-  background-color: $bleu;
-  border-radius: 999px;
+    width: 12px;
+    height: 12px;
+    background-color: #00777e;
+    border-radius: 999px;
+    transition: background-color 0.3s, opacity 0.3s;
 }
-.active{
+.statut__barre--active{
     width: 24px;
+    height: 12px;
+    background-color: $bleu;
+    border-radius: 999px;
+}
+.commentaire{
+    overflow: hidden;
+    position: relative;
+}
+.avis__prev,
+.avis__next {
+    position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: $bleu;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0 0.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  display: none;
+}
+
+.avis__prev {
+  left: 0;
+}
+
+.avis__next {
+  right: 0;
 }
 .boutique__image-tout{
     width: 75%;
