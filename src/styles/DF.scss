@@ -186,11 +186,12 @@ h3 {
 .écouteurdémo {
     width: 150%;
 }
-.vidéo{
-    display: grid;
+.scroll-video{
+    display: flex;
     position: relative;
     overflow: hidden;
     justify-items: center;
+    align-items: center;
 }
 .section {
     margin-bottom: 96px;

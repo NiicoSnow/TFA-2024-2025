@@ -1,4 +1,9 @@
 'use strict'
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const menu = document.querySelector(".header__nav");
 const menuBtn = document.querySelector(".menu__btn");
 const blurOverlay = document.querySelector(".blur-overlay");
@@ -72,3 +77,22 @@ carousel.addEventListener('touchend', (e) => {
 
 updateCarousel();
 
+window.addEventListener('DOMContentLoaded', () => {
+  const video = document.getElementById('ScrollVideo');
+
+  video.addEventListener('loadedmetadata', () => {
+    const duration = video.duration;
+
+    gsap.to(video, {
+      currentTime: duration,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".scroll-video",
+        start: "top top",
+        end: "+=3000", // plus grand = scroll plus long
+        scrub: 1,      // ⚠️ utilise un petit lissage pour éviter les à-coups
+        pin: true
+      }
+    });
+  });
+});
