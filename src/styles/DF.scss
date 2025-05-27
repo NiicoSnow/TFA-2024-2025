@@ -59,7 +59,7 @@ img{
     justify-content: space-between;
     height: 75px;
 }
-.header__nav-squeezie {
+.header__nav-AIAirsound {
     color: $blanc;
     font-size: 28px;
     font-weight: 600;
@@ -122,6 +122,9 @@ img{
     margin: 24px 0;
     text-align: left;
 }
+.hidden-mob{
+    display: none;
+}
 .menu__link {
     text-decoration: none;
     font-size: 18px;
@@ -162,7 +165,35 @@ h3 {
 .header__titre {
     margin-top:24px
 }
-
+.icons{
+    display: flex;
+    flex-direction: row;
+    gap:24px;
+    margin-top:100px;
+    justify-content: center;
+    margin-right:24px;
+}
+.icons__profil{
+    width: 30px;
+    filter: none;
+}
+.icons__panier{
+    width: 30px;
+    filter: none;
+}
+.icons__flag{
+    width: 30px;
+    filter: drop-shadow(0 0px 1px #ffffff);
+}
+.icons__panier:hover{
+    filter: drop-shadow(0 0px 5px #01DBE8);
+}
+.icons__profil:hover{
+    filter: drop-shadow(0 0px 5px #01DBE8);
+}
+.icons__flag:hover{
+    filter: drop-shadow(0 0px 5px #01DBE8);
+}
 .btncmd{
     background-color: $bleu;
     color: $noir;
@@ -566,4 +597,66 @@ canvas {
 }
 .footer__li:hover{
     text-decoration: underline $bleu;
+}
+
+@media (min-width: 1025px) {
+    .grid {
+        grid-template-columns: repeat(9, 1fr);
+        column-gap: 24px;
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+    .header__nav{
+        width: calc(100% + 96px);
+        margin-left: -48px;
+        justify-content: center;
+        padding:10px 48px;
+    }
+    .menu__btn{
+        display: none;
+    }
+    .menu__liste{
+        position: static;
+        width: 100%;
+        transform: none;
+        transition: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 0;
+        gap: 24px;
+        background-color: #000;
+    }
+    .header__nav-AIAirsound{
+        flex:0;
+        white-space: nowrap;
+        align-items: center;
+        height: 100%;
+        margin:0;
+    }
+    .icons{
+        margin:0;
+        margin-left:24px;
+    }
+    .icons__profil{
+        width: 24px;
+    }
+    .icons__flag{
+        width: 24px;
+    }
+    .icons__panier{
+        width: 24px;
+    }
+    .hidden-pc{
+        display: none;
+    }
+    .hidden-mob{
+        display: flex;
+    }
+    .menu__liste-clé{
+        display: flex;
+        flex-direction: row;
+        gap: 48px;
+    }
 }
