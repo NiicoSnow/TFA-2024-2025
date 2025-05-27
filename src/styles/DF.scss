@@ -392,6 +392,8 @@ canvas {
     background-color: #000;
     border-radius: 999px;
     border: 2px solid $bleu;
+    cursor: pointer;
+    transition: background-color 0.3s ease
 }
 .boutique__rond-noir:hover{
     background-color: #006267;
@@ -402,6 +404,8 @@ canvas {
     background-color: #FFF;
     border-radius: 999px;
     border: 2px solid $bleu;
+    cursor: pointer;
+    transition: background-color 0.3s ease
 }
 .boutique__rond-blanc:hover{
     background-color: #9dfaff;
