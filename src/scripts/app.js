@@ -110,7 +110,6 @@ window.addEventListener('DOMContentLoaded', () => {
       start: "top top",
       end: "+=1000",
       pin: ".scroll__video",
-      anticipatePin: 1,
     },
     onUpdate: function () {
       updateImage(Math.floor(this.targets()[0].frame));
