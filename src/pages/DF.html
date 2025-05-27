@@ -17,7 +17,7 @@
   <link rel="icon" href="data:,">
 </head>
 <body>
-  <header class="section header grid">
+  <header class="header grid">
     <nav class="header__nav menu--hidden ">
             <h1 class="header__nav-squeezie">AI Airsound</h1>
             <button class="menu__btn"></button>
@@ -33,8 +33,10 @@
     <p class="header__texte">Bruit agaçant du voisin ? Son de klaxon dans la rue ? Nuisance sonore des travaux ? Tous ces fracas ne seront plus qu’une onde adoucie grâce à AI AirSound.</p>
     <button class="btncmd">Commander</button>
     <a class="btndécouvrir" href="#">▾ Découvrir</a>
-    <div class="scroll-video">
-      <canvas id="scrollCanvas"></canvas>
+    <div class="section scroll">
+      <div class="scroll__video">
+        <canvas id="scrollCanvas"></canvas>
+      </div>
     </div>
   </header>
   <main>
@@ -51,7 +53,7 @@
       <h3>Personnalisation des filtres</h3>
       <p>Un son a ne pas masquer ? Il est possible, via l’application mobile, et grâce à une liste prédéfinie de son, de blacklister des sons à ne pas remplacer par vos écouteurs.</p>
       <p>Un son n’est pas dans la liste ? Il est possible d’ajouter un son dans la blackliste grâce au mode d’enregistrement et l’IA détecte le son que vous avez marqué pour l’ajouter dans la liste.</p>
-      <img src="#" alt="">
+      <img class="info__mockup" src="assets\images\mockupAIAirsoundOne.webp" alt="Image d'un iphone avec l'application de AI Airsound pour pouvoir enlever et ajouter des filtres sonores">
     </section>
 
     <section class="section mode grid">
@@ -70,7 +72,7 @@
 
     <section class="section caractéristiques grid">
       <h2>Caractéristiques</h2>
-      <h3 class="caractéristiques_titre">Audio :</h3>
+      <h3 class="caractéristiques__titre">Audio :</h3>
       <ul class="caractéristiques__liste">
         <li>mode SoundEase & SoundCore;</li>
         <li>technologie de réduction de bruit active (ANC);</li>
@@ -80,34 +82,34 @@
         <li>spatial Audio / Son 3D;</li>
         <li>codecs audio pris en charge (AAC, aptX, LDAC…).</li>
       </ul>
-      <h3 class="caractéristiques_titre">Autonomie :</h3>
+      <h3 class="caractéristiques__titre">Autonomie :</h3>
       <ul class="caractéristiques__liste">
         <li>jusqu’à 6h heures d’autonomie;</li>
         <li>46 heures avec le boîtier de charge;</li>
         <li>recharge rapide : 5 minutes = 1 heures d’écoute.</li>
       </ul>
-      <h3 class="caractéristiques_titre">Connectivité :</h3>
+      <h3 class="caractéristiques__titre">Connectivité :</h3>
       <ul class="caractéristiques__liste">
         <li>Bluetooth 5.4;</li>
         <li>appairage instantané;</li>
         <li>compatibilité iOS / Android;</li>
         <li>connecteur USB Type-C.</li>
       </ul>
-      <h3 class="caractéristiques_titre">Design & confort :</h3>
+      <h3 class="caractéristiques__titre">Design & confort :</h3>
       <ul class="caractéristiques__liste">
         <li>conception ergonomique pour un port longue durée;</li>
         <li>résistance à l’eau / à la sueur (IPX4);</li>
         <li>embouts en silicone (taille ajustable à l’achat);</li>
         <li>poids ultra-léger : 6 g par écouteur.</li>
       </ul>
-      <h3 class="caractéristiques_titre">Fonctionnalités intelligentes :</h3>
+      <h3 class="caractéristiques__titre">Fonctionnalités intelligentes :</h3>
       <ul class="caractéristiques__liste">
         <li>commandes tactiles personnalisables;</li>
         <li>assistant vocal intégré (Siri, Google Assistant, etc.);</li>
         <li>détection de port (pause automatique);</li>
         <li>application compagnon avec réglages audio & égaliseur.</li>
       </ul>
-      <h3 class="caractéristiques_titre">Fonctionnalités exclusives :</h3>
+      <h3 class="caractéristiques__titre">Fonctionnalités exclusives :</h3>
       <ul class="caractéristiques__liste">
         <li>mode SoundEase : remplace les bruits agressifs par des sons apaisants;</li>
         <li>auto-adaptation sonore selon l’environnement.</li>

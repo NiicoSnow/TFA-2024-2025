@@ -162,6 +162,7 @@ h3 {
 .header__titre {
     margin-top:24px
 }
+
 .btncmd{
     background-color: $bleu;
     color: $noir;
@@ -186,18 +187,26 @@ h3 {
 .écouteurdémo {
     width: 150%;
 }
-.scroll-video{
+.scroll{
+    height: 1500px;
+}
+.scroll__video{
     display: flex;
     position: relative;
     overflow: hidden;
     justify-items: center;
     align-items: center;
+    height: 100vh;
 }
 canvas {
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 150%;
+    height: auto;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
 .section {
     margin-bottom: 96px;
 }
@@ -207,6 +216,14 @@ canvas {
 .évidence{
     font-weight: 500;
     color: $bleu;
+}
+.info{
+    overflow-x: hidden;
+}
+.info__mockup{
+    width: 150%;
+    display: flex;
+    justify-self: center;
 }
 .Bigévidence{
     font-size: 28px;
@@ -239,7 +256,7 @@ canvas {
     list-style-position: outside;
     margin-left: -1.5em;
 }
-.caractéristiques_titre {
+.caractéristiques__titre {
     margin-bottom:0px;
     margin-left:0.5em;
 }
@@ -522,7 +539,7 @@ canvas {
 }
 .footer__logo{
     filter:none;
-    width: 50px;
+    width: 40px;
     cursor: pointer;
 }
 .footer__logo:hover{

@@ -106,10 +106,11 @@ window.addEventListener('DOMContentLoaded', () => {
     ease: "none",
     scrollTrigger: {
       scrub: 1,
-      trigger: "#scrollCanvas",
+      trigger: ".scroll__video",
       start: "top top",
-      end: "+=3000",
-      pin: true
+      end: "+=1000",
+      pin: ".scroll__video",
+      anticipatePin: 1,
     },
     onUpdate: function () {
       updateImage(Math.floor(this.targets()[0].frame));
