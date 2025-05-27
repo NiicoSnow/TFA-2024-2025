@@ -17,22 +17,22 @@
   <link rel="icon" href="data:,">
 </head>
 <body>
-  <header class="header grid">
+  <header id="header" class="header grid">
     <nav class="header__nav menu--hidden ">
-            <h1 class="header__nav-squeezie">AI Airsound</h1>
-            <button class="menu__btn"></button>
-            <div class="blur-overlay hidden"></div>
-            <ul class="menu__liste">
-                <li class="menu__el"><a href="#" class="menu__link active">Accueil</a></li>
-                <li class="menu__el"><a href="#" class="menu__link">Caractéristiques</a></li>
-                <li class="menu__el"><a href="#" class="menu__link">Avis</a></li>
-            </ul>
+      <h1 class="header__nav-squeezie">AI Airsound</h1>
+      <button class="menu__btn"></button>
+      <div class="blur-overlay hidden"></div>
+      <ul class="menu__liste">
+          <li class="menu__el"><a href="#header" class="menu__link">Accueil</a></li>
+          <li class="menu__el"><a href="#caractéristiques" class="menu__link">Caractéristiques</a></li>
+          <li class="menu__el"><a href="#avis" class="menu__link">Avis</a></li>
+      </ul>
     </nav>
     <h1 class="header__titre">AirSound One</h1>
     <h3 >Et si une nouvelle entreprise sortait un moyen de contrer les bruits stressants de la vie quotidienne ?</h3>
     <p class="header__texte">Bruit agaçant du voisin ? Son de klaxon dans la rue ? Nuisance sonore des travaux ? Tous ces fracas ne seront plus qu’une onde adoucie grâce à AI AirSound.</p>
     <button class="btncmd">Commander</button>
-    <a class="btndécouvrir" href="#">▾ Découvrir</a>
+    <a class="btndécouvrir" href="#démo">▾ Découvrir</a>
     <div class="section scroll">
       <div class="scroll__video">
         <canvas id="scrollCanvas"></canvas>
@@ -40,7 +40,7 @@
     </div>
   </header>
   <main>
-    <section class="section démo grid">
+    <section id="démo" class="section démo grid">
       <h2>Votre journée sans vacarme</h2>
       <p>Imaginez-vous être réveillé par le voisin du dessus qui décide de faire des travaux à 8h du matin, un dimanche ! Vous enfilez vos écouteurs et activez le filtre, qui diffuse immédiatement un bruit blanc ou un son doux et apaisant, masquant ainsi le vacarme.</p>
       <p>Quelques heures plus tard, dans l’après-midi, vous sortez faire vos courses à pied. Vous équipez vos écouteurs, et une fois dehors, vous entendez le murmure d’un ruisseau qui couvre le son agressif d’un klaxon. Plus loin, un concert de criquets remplace le vacarme du marteau-piqueur résonnant dans la rue. Vous marchez paisiblement, à l’abri de tout bruit strident.</p>
@@ -70,7 +70,7 @@
       <p>Durée d’écoute : <span class="évidence">6h sans recharge</span></p>
     </section>
 
-    <section class="section caractéristiques grid">
+    <section id="caractéristiques" class="section caractéristiques grid">
       <h2>Caractéristiques</h2>
       <h3 class="caractéristiques__titre">Audio :</h3>
       <ul class="caractéristiques__liste">
@@ -117,7 +117,7 @@
       <img class="boitierdemo" src="assets/images/AiAirsoundboitier+écouteurdémo.webp" alt="Image des écouteurs avec leur boitier, un des deux écouteurs est plus haut que l'autre comme démonstration">
     </section>
 
-    <section class="section commentaire grid">
+    <section id="avis" class="section commentaire grid">
       <h2>Avis utilisateurs</h2>
       <button class="avis__prev" aria-label="Avis précédent">‹</button>
       <div class="avis">
@@ -163,7 +163,7 @@
       </div>
     </section>
 
-    <section class="section boutique">
+    <section id="boutique" class="section boutique">
       <div class="boutique__produit grid">
         <h2 class="boutique__titre">Boutique</h2>
         <img class="boutique__image-tout" src="assets/images/AiAirsoundboitier+écouteurs.webp" alt="Image des écouteurs avec leur boitier, les écouteurs et le boitier sont de couleur noirs avec des petites lumière bleu">
@@ -211,32 +211,31 @@
         <button class="boutique__btnpanier-petiteboutique">Ajouter au panier</button>
       </div>
     </section>
-
-    <footer class="footer grid">
-      <h1 class="footer__marque">AI Airsound</h1>
-      <div class="footer__barre"></div>
-      <ul class="footer__colonne1">
-        <li class="footer__li"><a href="#" class="footer__texte">Accueil</a></li>
-        <li class="footer__li"><a href="#" class="footer__texte">Caractéristiques</a></li>
-        <li class="footer__li"><a href="#" class="footer__texte">Avis</a></li>
-        <li class="footer__li"><a href="#" class="footer__texte">FAQ</a></li>
-        <li class="footer__li"><a href="#" class="footer__texte">Support</a></li>
-        <li class="footer__li"><a href="#" class="footer__commander">Commander</a></li>
-      </ul>
-      <ul class="footer__colonne2">
-        <li class="footer__li"><a href="#" class="footer__texte">Mentions Légales</a></li>
-        <li class="footer__li"><a href="#" class="footer__texte">Conditions Générales de Vente</a></li>
-        <li class="footer__li"><a href="#" class="footer__texte">Politique de Confidentialité</a></li>
-        <li class="footer__li"><a href="#" class="footer__texte">Politique de Retour</a></li>
-      </ul>
-      <div class="footer__logos">
-        <img class="footer__logo" src="assets/images/logofacebook.svg" alt="Logo du réseau social Facebook">
-        <img class="footer__logo" src="assets/images/logoinsta.svg" alt="Logo du réseau social Instagram">
-        <img class="footer__logo" src="assets/images/logotiktok.svg" alt="Logo du réseau social TikTok">
-        <img class="footer__logo" src="assets/images/logoyoutube.svg" alt="Logo de la plateforme de streaming et de partage vidéo YouTube">
-      </div>
-      <p class="footer__copyright">&copy; AI Airsound. 2025 Tout droit réservé.</p>
-    </footer>
   </main>
+  <footer class="footer grid">
+    <h1 class="footer__marque">AI Airsound</h1>
+    <div class="footer__barre"></div>
+    <ul class="footer__colonne1">
+      <li class="footer__li"><a href="#header" class="footer__texte">Accueil</a></li>
+      <li class="footer__li"><a href="#caractéristiques" class="footer__texte">Caractéristiques</a></li>
+      <li class="footer__li"><a href="#avis" class="footer__texte">Avis</a></li>
+      <li class="footer__li"><a href="#" class="footer__texte">FAQ</a></li>
+      <li class="footer__li"><a href="#" class="footer__texte">Support</a></li>
+      <li class="footer__li"><a href="#boutique" class="footer__commander">Commander</a></li>
+    </ul>
+    <ul class="footer__colonne2">
+      <li class="footer__li"><a href="#" class="footer__texte">Mentions Légales</a></li>
+      <li class="footer__li"><a href="#" class="footer__texte">Conditions Générales de Vente</a></li>
+      <li class="footer__li"><a href="#" class="footer__texte">Politique de Confidentialité</a></li>
+      <li class="footer__li"><a href="#" class="footer__texte">Politique de Retour</a></li>
+    </ul>
+    <div class="footer__logos">
+      <img class="footer__logo" src="assets/images/logofacebook.svg" alt="Logo du réseau social Facebook">
+      <img class="footer__logo" src="assets/images/logoinsta.svg" alt="Logo du réseau social Instagram">
+      <img class="footer__logo" src="assets/images/logotiktok.svg" alt="Logo du réseau social TikTok">
+      <img class="footer__logo" src="assets/images/logoyoutube.svg" alt="Logo de la plateforme de streaming et de partage vidéo YouTube">
+    </div>
+    <p class="footer__copyright">&copy; AI Airsound. 2025 Tout droit réservé.</p>
+  </footer>
 </body>
 </html>
