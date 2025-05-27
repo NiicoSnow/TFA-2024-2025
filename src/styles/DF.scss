@@ -119,7 +119,7 @@ img{
     padding-left: 24px;
 }
 .menu__el {
-    margin: 24px 0;
+    margin: 36px 0;
     text-align: left;
 }
 .hidden-mob{
@@ -127,8 +127,8 @@ img{
 }
 .menu__link {
     text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 300;
     color: $blanc;
     transition: color 0.2s ease;
 }
@@ -658,5 +658,8 @@ canvas {
         display: flex;
         flex-direction: row;
         gap: 48px;
+    }
+    .header__titre{
+        font-size: 113px;
     }
 }
