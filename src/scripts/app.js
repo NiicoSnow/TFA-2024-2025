@@ -123,3 +123,17 @@ window.addEventListener('DOMContentLoaded', () => {
     updateImage(0);
   };
 });
+
+document.querySelectorAll('.boutique__produit').forEach(produit => {
+  const image = produit.querySelector('img');
+
+  if (image) {
+    produit.querySelectorAll('[data-img]').forEach(dot => {
+      dot.addEventListener('click', () => {
+        const newSrc = dot.getAttribute('data-img');
+        image.src = newSrc;
+      });
+    });
+  }
+});
+
