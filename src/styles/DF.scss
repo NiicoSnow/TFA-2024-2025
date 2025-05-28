@@ -207,6 +207,11 @@ h3 {
     line-height: 1.2;
     font-family: inherit;
     margin-bottom:24px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.btncmd:hover{
+    background-color: #00b6c0;
 }
 .btndécouvrir{
     text-decoration: none;
@@ -219,7 +224,7 @@ h3 {
     width: 150%;
 }
 .scroll{
-    height: 1500px;
+    height: 1400px;
 }
 .scroll__video{
     display: flex;
@@ -287,7 +292,7 @@ canvas {
     list-style-position: outside;
     margin-left: -1.5em;
 }
-.caractéristiques__titre {
+.caractéristiques__sous-titre {
     margin-bottom:0px;
     margin-left:0.5em;
 }
@@ -661,5 +666,85 @@ canvas {
     }
     .header__titre{
         font-size: 113px;
+        grid-column: 1/span 4;
+        margin-top:123px;
+        position: absolute;
+    }
+    .header__intro{
+        font-size: 28px;
+        grid-column: 1/span 4;
+        font-weight: 300;
+        margin-bottom:34px;
+        margin-top:232px;
+    }
+    .header__texte{
+        grid-column: 1/span 4;
+        margin-bottom:96px;
+    }
+    p{
+        max-width: 600px;
+    }
+    .btncmd{
+        grid-column: 1/span 3;
+        height: 75px;
+        margin-bottom:384px;
+    }
+    .btndécouvrir{
+        grid-column: 4/span 1;
+        margin-bottom:0;
+        align-self: center;
+        white-space: nowrap;
+        margin-bottom:384px;
+    }
+    canvas{
+        width: 50%;
+        left: 70%
+    }
+    .scroll{
+        position: absolute;
+        z-index:-1
+    }
+    .démo__titre{
+        grid-column: 1/span 4;
+    }
+    .démo__texte{
+        grid-column: 1/span 4;
+    }
+    .info__titre{
+        grid-column: 1/span 4;
+    }
+    .info__texte{
+        grid-column: 1/span 4;
+    }
+    .info__sous-titre{
+        grid-column: 1/span 4;
+    }
+    .info__mockup{
+        grid-column: 5/span 5;
+        width: 75%;
+        align-self: flex-end;
+    }
+    .info__partietexte{
+        grid-column: 1/span 4;
+    }
+    .info__partietexte p:last-of-type {
+        margin-bottom: 0;
+    }
+    .mode__titre{
+        text-align: center;
+    }
+    .partie__soundease{
+        grid-column: 1/span 4;
+    }
+    .barre{
+        grid-column: 5/span 1;
+        height: 100%;
+        width: 5px;
+    }
+    .partie__soundcore{
+        grid-column: 6/span 4;
+    }
+    .test{
+        align-self: flex-end;
     }
 }

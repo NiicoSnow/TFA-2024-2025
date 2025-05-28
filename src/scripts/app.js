@@ -1,8 +1,9 @@
 'use strict'
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 const menu = document.querySelector(".header__nav");
 const menuBtn = document.querySelector(".menu__btn");
@@ -108,7 +109,7 @@ window.addEventListener('DOMContentLoaded', () => {
       scrub: 1,
       trigger: ".scroll__video",
       start: "top top",
-      end: "+=1000",
+      end: "+=900",
       pin: ".scroll__video",
     },
     onUpdate: function () {
@@ -148,3 +149,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+document.querySelectorAll('.btncmd').forEach(button => {
+    button.addEventListener('click', () => {
+      const target = document.querySelector(button.dataset.target);
+      if (target) {
+        gsap.to(window, {
+          scrollTo: target,
+          duration: 2,
+          ease: 'power2.inOut'
+        });
+      }
+    });
+  });

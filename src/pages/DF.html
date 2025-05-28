@@ -18,7 +18,7 @@
 </head>
 <body>
   <header id="header" class="header grid">
-    <nav class="header__nav menu--hidden ">
+    <nav class="header__nav">
       <h1 class="header__nav-AIAirsound hidden-pc">AI Airsound</h1>
       <button class="menu__btn"></button>
       <div class="blur-overlay hidden"></div>
@@ -37,9 +37,9 @@
       </ul>
     </nav>
     <h1 class="header__titre">AirSound One</h1>
-    <h3 >Et si une nouvelle entreprise sortait un moyen de contrer les bruits stressants de la vie quotidienne ?</h3>
+    <h3 class="header__intro">Et si une nouvelle entreprise sortait un moyen de contrer les bruits stressants de la vie quotidienne ?</h3>
     <p class="header__texte">Bruit agaçant du voisin ? Son de klaxon dans la rue ? Nuisance sonore des travaux ? Tous ces fracas ne seront plus qu’une onde adoucie grâce à AI AirSound.</p>
-    <button class="btncmd">Commander</button>
+    <button class="btncmd" data-target="#boutique">Commander</button>
     <a class="btndécouvrir" href="#démo">▾ Découvrir</a>
     <div class="section scroll">
       <div class="scroll__video">
@@ -49,38 +49,44 @@
   </header>
   <main>
     <section id="démo" class="section démo grid">
-      <h2>Votre journée sans vacarme</h2>
-      <p>Imaginez-vous être réveillé par le voisin du dessus qui décide de faire des travaux à 8h du matin, un dimanche ! Vous enfilez vos écouteurs et activez le filtre, qui diffuse immédiatement un bruit blanc ou un son doux et apaisant, masquant ainsi le vacarme.</p>
-      <p>Quelques heures plus tard, dans l’après-midi, vous sortez faire vos courses à pied. Vous équipez vos écouteurs, et une fois dehors, vous entendez le murmure d’un ruisseau qui couvre le son agressif d’un klaxon. Plus loin, un concert de criquets remplace le vacarme du marteau-piqueur résonnant dans la rue. Vous marchez paisiblement, à l’abri de tout bruit strident.</p>
+      <h2 class="démo__titre">Votre journée sans vacarme</h2>
+      <p class="démo__texte">Imaginez-vous être réveillé par le voisin du dessus qui décide de faire des travaux à 8h du matin, un dimanche ! Vous enfilez vos écouteurs et activez le filtre, qui diffuse immédiatement un bruit blanc ou un son doux et apaisant, masquant ainsi le vacarme.</p>
+      <p class="démo__texte">Quelques heures plus tard, dans l’après-midi, vous sortez faire vos courses à pied. Vous équipez vos écouteurs, et une fois dehors, vous entendez le murmure d’un ruisseau qui couvre le son agressif d’un klaxon. Plus loin, un concert de criquets remplace le vacarme du marteau-piqueur résonnant dans la rue. Vous marchez paisiblement, à l’abri de tout bruit strident.</p>
     </section>
 
     <section class="section info grid">
-      <h2>Comment ça marche ?</h2>
-      <p>AI AirSound a réussi à développer des écouteurs capables d’écouter votre environnement pour en faire <span class="évidence">VOTRE</span> environnement.</p>
-      <p>Grâce à une intelligence artificielle très perfectionnée et plusieurs capteurs sensoriels, il est capable de couvrir un son en seulement <span class="évidence">0,03 secondes</span>.</p>
-      <h3>Personnalisation des filtres</h3>
-      <p>Un son a ne pas masquer ? Il est possible, via l’application mobile, et grâce à une liste prédéfinie de son, de blacklister des sons à ne pas remplacer par vos écouteurs.</p>
-      <p>Un son n’est pas dans la liste ? Il est possible d’ajouter un son dans la blackliste grâce au mode d’enregistrement et l’IA détecte le son que vous avez marqué pour l’ajouter dans la liste.</p>
+      <div class="info__partietexte">
+        <h2 class="info__titre">Comment ça marche ?</h2>
+        <p class="info__texte">AI AirSound a réussi à développer des écouteurs capables d’écouter votre environnement pour en faire <span class="évidence">VOTRE</span> environnement.</p>
+        <p class="info__texte">Grâce à une intelligence artificielle très perfectionnée et plusieurs capteurs sensoriels, il est capable de couvrir un son en seulement <span class="évidence">0,03 secondes</span>.</p>
+        <h3 class="info__sous-titre">Personnalisation des filtres</h3>
+        <p class="info__texte">Un son a ne pas masquer ? Il est possible, via l’application mobile, et grâce à une liste prédéfinie de son, de blacklister des sons à ne pas remplacer par vos écouteurs.</p>
+        <p class="info__texte">Un son n’est pas dans la liste ? Il est possible d’ajouter un son dans la blackliste grâce au mode d’enregistrement et l’IA détecte le son que vous avez marqué pour l’ajouter dans la liste.</p>
+      </div>
       <img class="info__mockup" src="assets/images/mockupAIAirsoundOne.webp" alt="Image d'un iphone avec l'application de AI Airsound pour pouvoir enlever et ajouter des filtres sonores">
     </section>
 
     <section class="section mode grid">
-      <h2>Deux mode d'écoute</h2>
-      <div class="soundease">
-        <h3 class="soundease__text">Mode <span class="Bigévidence">SoundEase</span></h3>
-        <img class="soundease__logo" src="assets/images/logosoundease.webp" alt="Logo du mode SoundEase, cela représente une onde qui se réduit à la moitié">
+      <h2 class="mode__titre">Deux mode d'écoute</h2>
+      <div class="partie__soundease">
+        <div class="soundease">
+          <h3 class="soundease__text">Mode <span class="Bigévidence">SoundEase</span></h3>
+          <img class="soundease__logo" src="assets/images/logosoundease.webp" alt="Logo du mode SoundEase, cela représente une onde qui se réduit à la moitié">
+        </div>
+        <p class="mode__texte">Remplace les bruits agressifs par des bruits apaisants, avec filtrage IA en 0,03 seconde.</p>
+        <p class="mode__texte test">Durée d’écoute : <span class="évidence">4h sans recharge</span></p>
       </div>
-      <p>Remplace les bruits agressifs par des bruits apaisants, avec filtrage IA en 0,03 seconde.</p>
-      <p>Durée d’écoute : <span class="évidence">4h sans recharge</span></p>
       <div class="barre"></div>
-      <h3 class="soundcore">Mode <span class="Bigévidence">SoundCore ♪</span></h3>
-      <p>Qui dit écouteurs dit écouter de la musique ! Il est évidemment possible de mettre de la musique dans vos écouteurs, grâce à des technologies audio avancées comme le Bluetooth 5.4 et les codecs aptX et AAC, qui assurent une transmission sans fil stable et une qualité sonore optimale. Et pour une immersion totale, la réduction de bruit active vous permet de vous isoler du monde extérieur, en ne gardant que l’essentiel : le son.</p>
-      <p>Durée d’écoute : <span class="évidence">6h sans recharge</span></p>
+      <div class="partie__soundcore">
+        <h3 class="soundcore">Mode <span class="Bigévidence">SoundCore ♪</span></h3>
+        <p class="mode__texte">Qui dit écouteurs dit écouter de la musique ! Il est évidemment possible de mettre de la musique dans vos écouteurs, grâce à des technologies audio avancées comme le Bluetooth 5.4 et les codecs aptX et AAC, qui assurent une transmission sans fil stable et une qualité sonore optimale. Et pour une immersion totale, la réduction de bruit active vous permet de vous isoler du monde extérieur, en ne gardant que l’essentiel : le son.</p>
+        <p class="mode__texte">Durée d’écoute : <span class="évidence">6h sans recharge</span></p>
+      </div>
     </section>
 
     <section id="caractéristiques" class="section caractéristiques grid">
-      <h2>Caractéristiques</h2>
-      <h3 class="caractéristiques__titre">Audio :</h3>
+      <h2 class="caractéristiques__titre">Caractéristiques</h2>
+      <h3 class="caractéristiques__sous-titre">Audio :</h3>
       <ul class="caractéristiques__liste">
         <li>mode SoundEase & SoundCore;</li>
         <li>technologie de réduction de bruit active (ANC);</li>
@@ -90,34 +96,34 @@
         <li>spatial Audio / Son 3D;</li>
         <li>codecs audio pris en charge (AAC, aptX, LDAC…).</li>
       </ul>
-      <h3 class="caractéristiques__titre">Autonomie :</h3>
+      <h3 class="caractéristiques__sous-titre">Autonomie :</h3>
       <ul class="caractéristiques__liste">
         <li>jusqu’à 6h heures d’autonomie;</li>
         <li>46 heures avec le boîtier de charge;</li>
         <li>recharge rapide : 5 minutes = 1 heures d’écoute.</li>
       </ul>
-      <h3 class="caractéristiques__titre">Connectivité :</h3>
+      <h3 class="caractéristiques__sous-titre">Connectivité :</h3>
       <ul class="caractéristiques__liste">
         <li>Bluetooth 5.4;</li>
         <li>appairage instantané;</li>
         <li>compatibilité iOS / Android;</li>
         <li>connecteur USB Type-C.</li>
       </ul>
-      <h3 class="caractéristiques__titre">Design & confort :</h3>
+      <h3 class="caractéristiques__sous-titre">Design & confort :</h3>
       <ul class="caractéristiques__liste">
         <li>conception ergonomique pour un port longue durée;</li>
         <li>résistance à l’eau / à la sueur (IPX4);</li>
         <li>embouts en silicone (taille ajustable à l’achat);</li>
         <li>poids ultra-léger : 6 g par écouteur.</li>
       </ul>
-      <h3 class="caractéristiques__titre">Fonctionnalités intelligentes :</h3>
+      <h3 class="caractéristiques__sous-titre">Fonctionnalités intelligentes :</h3>
       <ul class="caractéristiques__liste">
         <li>commandes tactiles personnalisables;</li>
         <li>assistant vocal intégré (Siri, Google Assistant, etc.);</li>
         <li>détection de port (pause automatique);</li>
         <li>application compagnon avec réglages audio & égaliseur.</li>
       </ul>
-      <h3 class="caractéristiques__titre">Fonctionnalités exclusives :</h3>
+      <h3 class="caractéristiques__sous-titre">Fonctionnalités exclusives :</h3>
       <ul class="caractéristiques__liste">
         <li>mode SoundEase : remplace les bruits agressifs par des sons apaisants;</li>
         <li>auto-adaptation sonore selon l’environnement.</li>
@@ -126,7 +132,7 @@
     </section>
 
     <section id="avis" class="section commentaire grid">
-      <h2>Avis utilisateurs</h2>
+      <h2 class="commentaire__titre">Avis utilisateurs</h2>
       <button class="avis__prev" aria-label="Avis précédent">‹</button>
       <div class="avis">
         <div class="avis__commentaire">
