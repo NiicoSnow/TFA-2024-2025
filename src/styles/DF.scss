@@ -398,11 +398,9 @@ canvas {
   pointer-events: auto;
   display: none;
 }
-
 .avis__prev {
   left: 0;
 }
-
 .avis__next {
   right: 0;
 }
@@ -469,6 +467,11 @@ canvas {
     font-family: inherit;
     margin-bottom:24px;
     grid-column: 2/span 5;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.boutique__btnpanier:hover{
+    background-color: #00b6c0;
 }
 .boutique__barre {
     height: 5px;
@@ -523,6 +526,11 @@ canvas {
     font-family: inherit;
     margin-bottom:48px;
     grid-column: 4/span 3;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.boutique__btnpanier-petiteboutique:hover{
+    background-color: #00b6c0;
 }
 .boutique__image-boitier{
     width: 50%;
@@ -603,6 +611,15 @@ canvas {
 .footer__li:hover{
     text-decoration: underline $bleu;
 }
+.boutique__populaire{
+    font-weight: 900;
+    margin-bottom:0;
+    grid-column: 1/span 3;
+    margin-bottom:-6px;
+    text-align: center;
+    color: $bleu;
+    text-shadow: 0 0 4px $bleu;
+}
 
 @media (min-width: 1025px) {
     .grid {
@@ -610,6 +627,7 @@ canvas {
         column-gap: 24px;
         padding-left: 48px;
         padding-right: 48px;
+        grid-template-rows: repeat(7, auto);
     }
     .header__nav{
         width: calc(100% + 96px);
@@ -738,13 +756,120 @@ canvas {
     }
     .barre{
         grid-column: 5/span 1;
-        height: 100%;
+        height: 100%; 
         width: 5px;
     }
     .partie__soundcore{
         grid-column: 6/span 4;
     }
-    .test{
-        align-self: flex-end;
+    .caractéristiques__groupe1{
+        grid-column: 1/span 3;
+        grid-row: 1/span 9;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 79px;
+        margin-left:48px
+    }
+    .caractéristiques__groupe2{
+        grid-column: 7/span 3;
+        grid-row: 1/span 9;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 79px;
+    }
+    .boitierdemo{
+        grid-column: 4/span 3;
+        grid-row: 4/span 3;
+        width: 80%;
+        justify-self: center;
+        align-self: center;
+        margin-left:-10%
+    }
+    .caractéristiques__liste{
+        margin-bottom:96px
+    }
+    .caractéristiques__titre{
+        grid-column: 4/span 3;
+        text-align: center;
+    }
+    .avis__prev,
+    .avis__next{
+        display: flex;
+        height: 40px;
+        width: 40px;
+        top:95%;
+        font-weight: 700;
+        font-size: 40px
+    }
+    .avis__commentaire{
+        max-width: 600px;
+        max-height: 500px;
+        min-width: 400px;
+    }
+    .statut{
+        margin-top:96px;
+    }
+    .gridboutique{
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+    }
+    .tout{
+        grid-column: 1/span 3;
+        align-self: center;
+        box-shadow: 0px 0px 10px $bleu;
+        border-radius: 25px;
+        border: 2px solid $bleu;
+    }
+    .boutique__produit{
+        padding:12px;
+    }
+    .écouteurs {
+        grid-column: 4/span 2;
+        align-self: center;
+    }
+    .boitier{
+        grid-column:6/span 2 ;
+        align-self: center;
+    }
+    .cable{
+        grid-column: 8/span 2;
+        align-self: center;
+    }
+    .boutique__rond-blanc{
+        max-width: 40px;
+        max-height: 40px;
+        min-width: 40px;
+    }
+    .boutique__rond-noir{
+        max-width: 40px;
+        max-height: 40px;
+        min-width: 40px;
+    }
+    .boutique__btnpanier{
+        grid-column: 2/span 7;
+    }
+    .boutique__btnpanier-petiteboutique{
+        grid-column:4/span 5 ;
+    }
+    .boutique__titre-produit{
+        grid-column: 1/-1;
+    }
+    .boutique__image-écouteurs{
+        width: 50%;
+    }
+    .boutique__texte-petiteboutique{
+        grid-column: 1/-1;
+    }
+    .boutique__barre{
+        display: none;
+    }
+    .inséparable{
+        font-weight: 300;
+        font-size: 20px;
+        display: flex;
+        justify-self: center;
+        margin-top:6px;
     }
 }
