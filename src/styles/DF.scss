@@ -371,6 +371,7 @@ canvas {
     background-color: #00777e;
     border-radius: 999px;
     transition: background-color 0.3s, opacity 0.3s;
+    cursor: pointer;
 }
 .statut__barre--active{
     width: 24px;
@@ -385,27 +386,27 @@ canvas {
 .avis__prev,
 .avis__next {
     position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: $bleu;
-  cursor: pointer;
-  z-index: 2;
-  padding: 0 0.5rem;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: auto;
-  display: none;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: $bleu;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0 0.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    display: none;
 }
 .avis__prev {
-  left: 0;
+    left: 0;
 }
 .avis__next {
-  right: 0;
+    right: 0;
 }
 .boutique__image-tout{
     width: 75%;
@@ -811,6 +812,12 @@ canvas {
         top:95%;
         font-weight: 700;
         font-size: 40px
+    }
+    .avis__prev{
+        left:300px;
+    }
+    .avis__next{
+        right:300px;
     }
     .avis__commentaire{
         max-width: 600px;

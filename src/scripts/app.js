@@ -75,6 +75,12 @@ carousel.addEventListener('touchend', (e) => {
   carousel.style.transition = 'transform 0.4s ease';
   updateCarousel();
 });
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    index = i;
+    updateCarousel();
+  });
+});
 
 updateCarousel();
 
