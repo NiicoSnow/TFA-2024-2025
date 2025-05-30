@@ -121,6 +121,7 @@ img{
 .menu__el {
     margin: 36px 0;
     text-align: left;
+    list-style: none;
 }
 .hidden-mob{
     display: none;
@@ -172,6 +173,8 @@ h3 {
     margin-top:100px;
     justify-content: center;
     margin-right:24px;
+    list-style: none;
+    padding: 0;
 }
 .icons__profil{
     width: 30px;
@@ -621,6 +624,9 @@ canvas {
     text-shadow: 0 0 4px $bleu;
     display:none;
 }
+.menu__liste-clé{
+    padding: 0;
+}
 @media (min-width: 1025px) {
     .grid {
         grid-template-columns: repeat(9, 1fr);
@@ -667,6 +673,7 @@ canvas {
     }
     .icons__flag{
         width: 24px;
+        margin-top:3px;
     }
     .icons__panier{
         width: 24px;
@@ -681,7 +688,9 @@ canvas {
         display: flex;
         flex-direction: row;
         gap: 48px;
+        list-style: none;
     }
+    
     .header__titre{
         font-size: 113px;
         grid-column: 1/span 4;
