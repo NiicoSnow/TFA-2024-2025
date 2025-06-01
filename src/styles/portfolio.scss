@@ -11,7 +11,7 @@ body{
     font-size: 20px;
     line-height: 1.4;
     margin: 0;
-    font-weight: 300;
+    font-weight: 400;
     overflow-x: hidden;
     color: #000;
 }
@@ -45,4 +45,18 @@ body{
     margin-top:48px;
     box-shadow:0 0px 15px $bleu;
     grid-column: 2/span 5;
+}
+.bonjour{
+    font-weight: 500;
+    text-align: center;
+    margin: 24px;
+    margin-bottom:48px;
+    line-height: 1.2;
+    font-size: 40px;
+}
+.évidence{
+    font-weight: 700;
+}
+.présentation{
+    margin-bottom: 48px;
 }
