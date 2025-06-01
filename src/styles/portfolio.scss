@@ -39,24 +39,92 @@ body{
     margin:0;
     align-self: center;
 }
-.moi{
+.accueil__moi{
     width: 100%;
     border-radius: 25px;
     margin-top:48px;
     box-shadow:0 0px 15px $bleu;
     grid-column: 2/span 5;
 }
-.bonjour{
+.accueil__bonjour{
     font-weight: 500;
     text-align: center;
     margin: 24px;
-    margin-bottom:48px;
+    margin-bottom: 48px;
     line-height: 1.2;
     font-size: 40px;
 }
 .évidence{
     font-weight: 700;
 }
-.présentation{
+.accueil__présentation{
     margin-bottom: 48px;
+}
+.accueil__projets{
+    border-radius: 25px;
+    height: 75px;
+    border: none;
+    background-color: #FFF;
+    box-shadow:0 0px 15px $bleu;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    color:$bleu;
+    margin-bottom:96px;
+    cursor:pointer;
+    transition: transform 0.5s ease;
+}
+.accueil__projets:hover{
+    transform: scale(1.04);
+}
+.footer{
+    background-color: #FFF;
+    box-shadow: 0 -2px 10px $bleu;
+}
+.footer__contact{
+    color: $bleu;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top:24px;
+    margin-bottom:12px
+}
+p{
+    margin:0
+}
+.footer__mail{
+    margin-bottom:12px
+}
+.footer__numéro{
+    margin-bottom:24px
+}
+.section {
+  display: none;
+}
+
+.accueil--active {
+  display: grid;
+}
+
+.projets--active {
+  display: grid;
+}
+.projets__retour {
+  margin-top: 48px;
+  font-size: 40px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  padding-bottom: 5px;
+  color: $bleu;
+  font-weight: 500;
+  border:none;
+  box-shadow:0 0px 10px $bleu;
+  border-radius: 10px;
+  margin-bottom: 48px;
+  transition: transform 0.5s ease;
+}
+.projets__retour:hover{
+    transform: scale(1.05);
 }
