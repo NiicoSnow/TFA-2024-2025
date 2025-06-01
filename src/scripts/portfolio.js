@@ -24,3 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
     accueil.classList.add("accueil--active");
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const ruxouvert = document.querySelector('.projets__rux');
+    const ruxfermé = document.querySelector(".projets__rux-header")
+
+    ruxfermé.addEventListener('click', function () {
+        ruxouvert.classList.toggle('projets__rux--active');
+    });
+});
