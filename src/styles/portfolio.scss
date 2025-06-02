@@ -40,11 +40,11 @@ body{
     align-self: center;
 }
 .accueil__moi{
-    width: 100%;
+    width: 75%;
     border-radius: 25px;
     margin-top:48px;
     box-shadow:0 0px 15px $bleu;
-    grid-column: 2/span 5;
+    justify-self: center;
 }
 .accueil__bonjour{
     font-weight: 500;
@@ -230,6 +230,7 @@ p{
         margin:0;
         max-width: 400px;
         margin-top:192px;
+        width: 100%;
     }
     .accueil__bonjour,
     .accueil__présentation{
@@ -284,5 +285,23 @@ p{
     .projets__retour{
         grid-row: 1;
         margin-bottom:142px;
+    }
+}
+@media (min-width: 500px) and (max-width: 1024px) {
+    .accueil__moi,
+    .accueil__projets{
+        width: 400px;
+        justify-self: center;
+    }
+    .accueil__présentation{
+        justify-self: center;
+        max-width: 535px;
+    }
+    .projets__rux,
+    .projets__janus,
+    .projets__DF,
+    .projets--active{
+        width: 400px;
+        justify-self: center;
     }
 }
