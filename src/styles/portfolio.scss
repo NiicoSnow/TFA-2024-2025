@@ -129,7 +129,9 @@ p{
 .projets__retour:hover{
     transform: scale(1.05);
 }
-
+.projets__credit{
+    cursor: pointer;
+}
 .projets__rux,
 .projets__janus,
 .projets__DF,
@@ -137,7 +139,12 @@ p{
     height: 100px;
     overflow: hidden;
 }
-
+.projets__rux:hover,
+.projets__janus:hover,
+.projets__DF:hover,
+.projets__credit:hover{
+    transform: scale(1.04);
+}
 .projets__rux--active,
 .projets__janus--active,
 .projets__DF--active {
