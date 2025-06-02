@@ -237,6 +237,10 @@ p{
     }
     .accueil__projets{
         grid-column: 4/span 2;
+        max-width: 400px;
+        font-size: 28px;
+        height: 100px;
+        margin-bottom:48px
     }
     .accueil__présentation{
         margin-bottom:112px;
@@ -252,13 +256,33 @@ p{
         text-align: start;
         font-size: 80px;
         margin-top:192px;
+        max-width: 400px;
     }
     .footer{
         margin-top:192px;
     }
-    .accueil__projets{
-        max-width: 400px;
-        font-size: 28px;
-        height: 100px;
+    .projets__rux,
+    .projets__janus{
+        grid-column: 1/span 3;
+        width: 400px;
+        justify-self: center;
+    }
+    .projets__DF,
+    .projets__credit{
+        grid-column: 5/span 3;
+        width: 400px;
+        justify-self: center;
+    }
+    .projets__rux,
+    .projets__DF{
+        grid-row: 2;
+    }
+    .projets__janus,
+    .projets__credit{
+        grid-row: 3;
+    }
+    .projets__retour{
+        grid-row: 1;
+        margin-bottom:142px;
     }
 }
