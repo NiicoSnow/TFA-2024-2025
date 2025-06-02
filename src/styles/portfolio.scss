@@ -216,3 +216,49 @@ p{
 .contenu__texte{
     margin-bottom:24px;
 }
+
+@media (min-width: 1025px) {
+    .grid{
+        column-gap: 24px;
+        padding-left: 48px;
+        padding-right: 48px;
+        grid-template-rows: repeat(7, auto);
+    }
+    .accueil__moi{
+        grid-column: 1/span 2;
+        grid-row: 1/-1;
+        margin:0;
+        max-width: 400px;
+        margin-top:192px;
+    }
+    .accueil__bonjour,
+    .accueil__présentation{
+        grid-column: 4/span 3;
+    }
+    .accueil__projets{
+        grid-column: 4/span 2;
+    }
+    .accueil__présentation{
+        margin-bottom:112px;
+        font-size: 28px;
+        max-width: 600px;
+    }
+    .header__titre{
+        grid-row: 1/-1;
+    }
+    .accueil__bonjour{
+        margin: 0;
+        margin-bottom:48px;
+        text-align: start;
+        font-size: 80px;
+        margin-top:192px;
+    }
+    .footer{
+        margin-top:192px;
+    }
+    .accueil__projets{
+        max-width: 400px;
+        font-size: 28px;
+        height: 100px;
+    }
+}
