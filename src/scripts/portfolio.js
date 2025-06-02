@@ -26,10 +26,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    const ruxouvert = document.querySelector('.projets__rux');
-    const ruxfermé = document.querySelector(".projets__rux-header")
+  const ruxouvert = document.querySelector('.projets__rux');
+  const ruxfermé = document.querySelector('.projets__rux-header');
 
-    ruxfermé.addEventListener('click', function () {
-        ruxouvert.classList.toggle('projets__rux--active');
-    });
+  const janusouvert = document.querySelector('.projets__janus');
+  const janusfermé = document.querySelector('.projets__janus-header');
+
+  const DFouvert = document.querySelector('.projets__DF');
+  const DFfermé = document.querySelector('.projets__DF-header');
+
+  ruxfermé.addEventListener('click', function () {
+    ruxouvert.classList.toggle('projets__rux--active');
+  });
+
+  janusfermé.addEventListener('click', function () {
+    janusouvert.classList.toggle('projets__janus--active');
+  });
+
+  DFfermé.addEventListener('click', function () {
+    DFouvert.classList.toggle('projets__DF--active');
+  });
 });
