@@ -89,7 +89,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const context = canvas.getContext("2d");
 
   const frameCount = 125;
-  const currentFrame = index => `assets/images/frames/frame_${index.toString().padStart(4, '0')}.webp`;
+  const currentFrame = index => `assets/images/DF/frames/frame_${index.toString().padStart(4, '0')}.webp`;
 
   const images = [];
   let img = new Image();
