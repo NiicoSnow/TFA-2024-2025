@@ -25,6 +25,10 @@ body{
 .grid > * {
     grid-column: 1 / -1;
 }
+.gridIN{
+        padding-left: 24px;
+        padding-right: 24px;
+}
 .headerpf{
     height: 75px;
     width: auto;
@@ -364,6 +368,78 @@ h1{
     padding: 0;
     display: grid;
 }
+.promo{
+    margin-top:24px;
+    height: auto;
+}
+.promo__text{
+    margin-top:24px;
+}
+.critique{
+    margin-top:24px;
+    height: auto;
+}
+.critique__text{
+    margin-top:24px;
+}
+.factuelle {
+    margin-top:24px;
+    height: auto;
+}
+.factuelle__text{
+    margin-top: 24px;
+}
+.header__retour {
+    cursor: pointer;
+    box-shadow:0 0px 10px $bleu;
+    border-radius: 10px;
+    margin-bottom: 48px;
+    transition: transform 0.5s ease;
+    background-color: $blanc;
+    position: absolute;
+    margin-top:120px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+.header__retour:hover{
+    transform: scale(1.05);
+}
+.header__retour-texte{
+    font-size: 53px;
+    color: $bleu;
+    font-weight: 300;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom:12px;
+    width: 50px;
+}
+.sitejanus{
+    font-size: 28px;
+    border-radius: 25px;
+    background-color: $blanc;
+    text-decoration: none;
+    justify-self: center;
+    text-align: center;
+    padding:20px;
+    transition: transform 0.5s ease;
+    box-shadow:0 0px 10px $bleu;
+    color: $bleu;
+}
+.sitejanus:hover{
+    transform: scale(1.05);
+}
+.promo__photo{
+    margin-bottom:24px;
+}
+.critique__photo{
+    margin-bottom:24px;
+}
+.factuelle__photo{
+    margin-bottom:24px;
+}
 @media (min-width: 1025px) {
     .grid{
         column-gap: 24px;
@@ -453,6 +529,9 @@ h1{
     .header__img{
         height: 700px;
     }
+    .header__nav-titre{
+        margin-left: 48px;
+    }
     .contexte {
         grid-column: 2/ span 4;
         grid-row: 1/span 9;
@@ -469,11 +548,44 @@ h1{
         grid-column: 2/ span 4;
         grid-row: 1/span 9;
    }
+   .choix {
+        grid-column: 2/ span 4;
+        grid-row: 1/span 9;
+   }
    .repartition {
         grid-column: 5/ span 4;
         grid-row: 1/ span 9;
    }
+   .axes {
+        grid-column: 5/ span 4;
+        grid-row: 1/ span 9;
+   }
+   .approche {
+        grid-column: 5/ span 4;
+        grid-row: 1/ span 9;
+   }
+   .direction {
+        grid-column: 2/span 4;
+        grid-row: 1;
+   }
+   .promo {
+        grid-column: 5/span 3;
+   }
+   .critique {
+        grid-column: 3/span 3;
+   }
+   .factuelle {
+        grid-column: 5/span 3;
+   }
    .plans {
+        grid-column: 2/ span 4;
+        grid-row: 1/ span 9;
+   }
+   .fin{
+        grid-column: 2/ span 4;
+        grid-row: 1/ span 9; 
+    }
+   .développement{
         grid-column: 2/ span 4;
         grid-row: 1/ span 9;
    }
@@ -540,7 +652,25 @@ h1{
     .logo img{
         height: 80px;
     }
-    
+    .sitejanus{
+        grid-column: 4/span 3;
+    }
+    .promo__photo{
+        grid-column: 8/span 1;
+        margin-top:24px;
+        align-self: center;
+    }
+    .critique__photo{
+        grid-column: 2/span 1;
+        grid-row: 3;
+        margin-top:24px;
+        align-self: center;
+    }
+    .factuelle__photo{
+        grid-column: 8/span 1;
+        margin-top:24px;
+        align-self: center;
+    }
 }
 @media (min-width: 500px) and (max-width: 1024px) {
     .accueil__moi,
