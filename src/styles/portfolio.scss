@@ -255,7 +255,7 @@ h2 {
     margin-top:24px
 }
 .recherche {
-    margin-top:58px
+    margin-top:58px;
 }
 .margin{
     margin-top:96px;
@@ -308,7 +308,7 @@ h1{
   display: none;
 }
 .section {
-    height: 100%;
+    height: auto;
     background-color: $blanc;
     border-radius: 25px;
     box-shadow: 0px 0px 10px $bleu;
