@@ -5,6 +5,7 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
+//j'ai repris ceci de mon site Janus où j'avais eu besoin d'aide d'une IA
 const menu = document.querySelector(".header__nav");
 const menuBtn = document.querySelector(".menu__btn");
 const blurOverlay = document.querySelector(".blur-overlay");
@@ -14,6 +15,7 @@ menuBtn.addEventListener("click", () => {
     blurOverlay.classList.toggle("hidden");
 });
 
+//J'ai eu besoin d'une IA pour faire le carrousel
 const carousel = document.querySelector('.avis');
 const items = document.querySelectorAll('.avis__commentaire');
 const dots = document.querySelectorAll('.statut span');
@@ -84,6 +86,7 @@ dots.forEach((dot, i) => {
 
 updateCarousel();
 
+//j'ai eu besoin d'une IA pour faire l'animation des écouteurs
 window.addEventListener('DOMContentLoaded', () => {
   const canvas = document.getElementById("scrollCanvas");
   const context = canvas.getContext("2d");
@@ -130,6 +133,7 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 });
 
+//j'ai eu besoin d'une IA pour faire le switch entre les couleurs des produits
 document.querySelectorAll('.boutique__produit').forEach(produit => {
   const image = produit.querySelector('img');
 
@@ -143,6 +147,7 @@ document.querySelectorAll('.boutique__produit').forEach(produit => {
   }
 });
 
+//j'ai eu besoin d'une IA pour faire un ancrâge avec un bouton
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();

@@ -5,6 +5,7 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
+//j'ai eu besoin d'aide d'une IA pour faire le switch de contenu en 1 html et de son animation avec GSAP.
 document.addEventListener("DOMContentLoaded", () => {
   const accueil = document.getElementById("accueil");
   const projets = document.getElementById("projets");
@@ -54,7 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-
+  
+//Ici n'a pas eu d'usage d'IA
   const ruxouvert = document.querySelector('.projets__rux');
   const ruxfermé = document.querySelector('.projets__rux-header');
 
