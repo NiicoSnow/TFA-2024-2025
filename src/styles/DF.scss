@@ -400,7 +400,6 @@ canvas {
     align-items: center;
     justify-content: center;
     pointer-events: auto;
-    display: none;
 }
 .avis__prev {
     left: 0;
@@ -806,7 +805,6 @@ canvas {
     }
     .avis__prev,
     .avis__next{
-        display: flex;
         height: 40px;
         width: 40px;
         top:95%;
