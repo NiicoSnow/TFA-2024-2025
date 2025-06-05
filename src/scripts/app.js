@@ -172,3 +172,19 @@ document.querySelectorAll('.btncmd').forEach(button => {
       }
     });
   });
+
+//j'ai eu besoin d'aide d'une IA pour faire cette animation au scroll des sections
+gsap.utils.toArray('.section').forEach(section => {
+  gsap.fromTo(section, 
+    { opacity: 0, y: 50 }, 
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: section,
+        start: "top 70%",
+        toggleActions: "play none none reverse",
+      }
+    });
+});

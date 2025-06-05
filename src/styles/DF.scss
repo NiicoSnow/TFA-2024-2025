@@ -229,6 +229,7 @@ h3 {
 }
 .scroll{
     height: 1400px;
+    margin-bottom:96px
 }
 .scroll__video{
     display: flex;
@@ -249,6 +250,8 @@ canvas {
 
 .section {
     margin-bottom: 96px;
+    opacity: 0; /* On part invisible */
+    transform: translateY(50px); /* Décalé vers le bas */
 }
 .section > *:last-child {
     margin-bottom: 0;
