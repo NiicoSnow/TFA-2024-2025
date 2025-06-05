@@ -440,6 +440,35 @@ h1{
 .factuelle__photo{
     margin-bottom:24px;
 }
+//crédit
+.crédit__portfolio{
+    margin-top: 144px;
+}
+.créditTitre{
+    font-size: 40px;
+    margin-bottom:24px;
+    margin-top: 0;
+}
+.créditSousTitre{
+    margin-top:0;
+    margin-bottom:17px;
+}
+.créditTexte{
+    margin-bottom:56px;
+    max-width: 535px;
+}
+.créditPrompts{
+    background-color: #303030;
+    color: #FFF;
+    padding: 24px;
+    border-radius: 10px;
+    font-weight: 200;
+    margin-bottom:12px;
+}
+.créditSection{
+    margin-bottom:96px
+    
+}
 @media (min-width: 1025px) {
     .grid{
         column-gap: 24px;
@@ -596,7 +625,7 @@ h1{
         grid-column: 2/ span 4;
    }
    .code {
-    grid-column: 5/ span 4;
+        grid-column: 5/ span 4;
     }
    .conclusion {
         grid-column: 2/ span 4;
@@ -671,6 +700,10 @@ h1{
         margin-top:24px;
         align-self: center;
     }
+    //crédit
+    .créditSection{
+        justify-self: center;
+    }
 }
 @media (min-width: 500px) and (max-width: 1024px) {
     .accueil__moi,
@@ -696,6 +729,10 @@ h1{
     }
     .photos{
         max-width: 500px;
+        justify-self: center;
+    }
+    //crédit
+    .créditSection{
         justify-self: center;
     }
 }
