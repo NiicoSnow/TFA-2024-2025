@@ -250,8 +250,8 @@ canvas {
 
 .section {
     margin-bottom: 96px;
-    opacity: 0; /* On part invisible */
-    transform: translateY(50px); /* Décalé vers le bas */
+    opacity: 0;
+    transform: translateY(50px);
 }
 .section > *:last-child {
     margin-bottom: 0;
