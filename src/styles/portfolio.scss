@@ -2,19 +2,21 @@
 @import 'utils/variables';
 @import 'components/type';
 
-$blanc: #FFF;
-$fond:#EFEFEF;
-$bleu:#008CFF;
+$premier: #13131a;
+$deuxieme:#1e1e35;
+$troisieme:#272743;
+$quatrieme: #404072;
+$texte:#F0F0F0;
 
 body{
-    font-family: "Outfit", sans-serif;
-    background-color: $fond;
+    font-family: "Exo 2", sans-serif;
+    background-color: $premier;
     font-size: 20px;
     line-height: 1.4;
     margin: 0;
     font-weight: 400;
     overflow-x: hidden;
-    color: #000;
+    color: $texte;
 }
 .grid {
     display: grid;
@@ -30,12 +32,52 @@ body{
         padding-left: 24px;
         padding-right: 24px;
 }
-.header__titre{
-    font-size: 28px;
+.header__nav{
+    height: 75px;
+    background-color:$deuxieme;
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    margin-bottom: 92px;
+}
+.header__soustitre{
+    color:#BFBFBF;
+    margin-top:0;
+    margin-bottom:112px ;
+}
+.header__image{
+    height: 400px;
+    background-color: #BFBFBF;
+}
+h1{
+    line-height:1.2;
     font-weight: 700;
-    line-height: 1.2;
-    margin:0;
-    align-self: center;
+    margin-top:0;
+    margin-bottom:48px ;
+}
+h2{
+    font-size: 28px;
+    line-height:1.2;
+    font-weight:500;
+}
+.lien{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 48px;
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    background-color: $troisieme;
+    height:auto;
+    padding-bottom: 24px;
+    padding-top: 24px;
+    box-sizing:border-box; 
+}
+.lien__bouton{
+    display: block;
+    height: 80px;
+    background-color: $quatrieme;
+    width: 140px;
 }
 .évidence{
     font-weight: 700;
@@ -86,7 +128,7 @@ p{
 .projets__credit-titre {
     transition: all 0.3s ease;
     font-size: 28px;
-    color: $bleu;
+    color: #000;
     margin: 24px;
     margin-top: 35px;
     line-height: 1;
@@ -94,9 +136,9 @@ p{
 
 .bouton {
     border-radius: 25px;
-    box-shadow: 0px 0px 10px $bleu;
+    box-shadow: 0px 0px 10px #000;
     transition: all 0.3s ease;
-    background-color: $blanc;
+    background-color: #FFF;
     margin-bottom: 48px;
 }
 
@@ -106,8 +148,8 @@ p{
     display: inline-block;
     width: 15px;
     height: 15px;
-    border-right: 3px solid $bleu;
-    border-bottom: 3px solid $bleu;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
     transform: rotate(45deg);
     transition: transform 0.3s ease;
     margin-left: 10px;
@@ -132,11 +174,12 @@ p{
 .contenu__lien{
     text-decoration: none;
     font-weight: 700;
-    color:$bleu;
+    color:#000;
 }
 .contenu__texte{
     margin-bottom:24px;
 }
+/*
 //case study
 h2 {
     font-weight: 600;
@@ -379,6 +422,7 @@ h1{
 .créditSection{
     margin-bottom:96px
 }
+*/
 @media (min-width: 1025px) {
     .grid{
         column-gap: 24px;
