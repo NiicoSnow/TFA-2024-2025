@@ -5,7 +5,7 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
-const PARALLAX_FACTOR = 0.05;
+const PARALLAX_FACTOR = 0.02;
 
 const bg = document.querySelector('.parallax-bg');
 
