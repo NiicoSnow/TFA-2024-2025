@@ -29,8 +29,8 @@ body{
     grid-column: 1 / -1;
 }
 .gridIN{
-        padding-left: 24px;
-        padding-right: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 .header__nav{
     height: 75px;
@@ -59,6 +59,9 @@ h2{
     line-height:1.2;
     font-weight:500;
 }
+.section{
+    margin-bottom:600px;
+}
 .lien{
     display: flex;
     flex-wrap: wrap;
@@ -74,10 +77,30 @@ h2{
     box-sizing:border-box; 
 }
 .lien__bouton{
-    display: block;
+    display: flex;
     height: 80px;
     background-color: $quatrieme;
     width: 140px;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+.lien__bouton:hover{
+    transform: scale(1.05);
+}
+.description{
+    background-color: $premier;
+    height: 500px;
+    padding-top: 48px;
+    padding-bottom: 20px;
+}
+.description__titre{
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom:34px;
+}
+.description__texte{
+    margin-bottom: 28px;
 }
 .évidence{
     font-weight: 700;
