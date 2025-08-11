@@ -5,6 +5,25 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
+const PARALLAX_FACTOR = 0.05;
+
+const bg = document.querySelector('.parallax-bg');
+
+let ticking = false;
+function onScroll() {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      const y = -window.scrollY * PARALLAX_FACTOR;
+      bg.style.transform = `translateY(${y}px) translateZ(0)`;
+      ticking = false;
+    });
+    ticking = true;
+  }
+}
+
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
 //Ici n'a pas eu d'usage d'IA
 const ruxouvert = document.querySelector('.projets__rux');
 const ruxfermé = document.querySelector('.projets__rux-header');

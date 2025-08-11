@@ -32,6 +32,23 @@ body{
     padding-left: 24px;
     padding-right: 24px;
 }
+.parallax-bg{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 125%;
+    height: 125%;
+    z-index: -1;
+    background-image: url("../assets/images/galaxy1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    will-change: transform;
+    transform: translateY(0);
+}
+.header{
+    background-color: $premier;
+}
 .header__nav{
     height: 75px;
     background-color:$deuxieme;
@@ -61,6 +78,7 @@ h2{
 }
 .section{
     margin-bottom:600px;
+    background-color: $premier;
 }
 .lien{
     display: flex;
@@ -89,7 +107,6 @@ h2{
     transform: scale(1.05);
 }
 .description{
-    background-color: $premier;
     height: 500px;
     padding-top: 48px;
     padding-bottom: 20px;
