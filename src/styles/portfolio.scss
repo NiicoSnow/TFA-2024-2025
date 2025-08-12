@@ -130,99 +130,222 @@ h2{
 p{
     margin:0
 }
-.projets__credit{
-    cursor: pointer;
+$projets-max-height: 500px;
+
+// === Commun ===
+.projets__credit {
+  cursor: pointer;
 }
+
 .projets__rux,
 .projets__janus,
 .projets__DF,
 .projets__credit {
-    height: 100px;
-    overflow: hidden;
+  max-height: 100px; // fermé par défaut
+  overflow: hidden;
+  transition: max-height .35s ease, transform .3s ease;
 }
+
 .projets__rux:hover,
 .projets__janus:hover,
 .projets__DF:hover,
-.projets__credit:hover{
-    transform: scale(1.04);
+.projets__credit:hover {
+  transform: scale(1.04);
 }
+
+// État actif (mobile)
 .projets__rux--active,
 .projets__janus--active,
 .projets__DF--active {
-    height: auto;
+  max-height: $projets-max-height;
 }
 
 .projets__rux-contenu,
 .projets__janus-contenu,
 .projets__DF-contenu {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    margin: 24px;
-    margin-top: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin: 24px;
+  margin-top: 0;
 }
 
 .projets__rux--active .projets__rux-contenu,
 .projets__janus--active .projets__janus-contenu,
 .projets__DF--active .projets__DF-contenu {
-    opacity: 1;
+  opacity: 1;
 }
 
 .projets__rux-titre,
 .projets__janus-titre,
 .projets__DF-titre,
 .projets__credit-titre {
-    transition: all 0.3s ease;
-    font-size: 28px;
-    color: $texte;
-    margin: 24px;
-    margin-top: 35px;
-    line-height: 1;
-    font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 28px;
+  color: $texte;
+  margin: 24px;
+  margin-top: 35px;
+  line-height: 1;
+  font-weight: 600;
 }
+
 .bouton {
-    transition: all 0.3s ease;
-    background-color: $troisieme;
-    margin-bottom: 48px;
+  transition: all 0.3s ease;
+  background-color: $troisieme;
+  margin-bottom: 48px;
 }
+
 .projets > .bouton:last-child {
   margin-bottom: 0;
 }
+
 .projets__rux-fleche,
 .projets__janus-fleche,
 .projets__DF-fleche {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-right: 3px solid $texte;
-    border-bottom: 3px solid $texte;
-    transform: rotate(45deg);
-    transition: transform 0.3s ease;
-    margin-left: 10px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-right: 3px solid $texte;
+  border-bottom: 3px solid $texte;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  margin-left: 10px;
 }
 
 .projets__rux--active .projets__rux-fleche,
 .projets__janus--active .projets__janus-fleche,
 .projets__DF--active .projets__DF-fleche {
-    transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
 .projets__rux-header,
 .projets__janus-header,
 .projets__DF-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 24px;
-    cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 24px;
+  cursor: pointer;
 }
 
-.contenu__lien{
-    text-decoration: none;
-    font-weight: 700;
-    color:$texte;
+.contenu__lien {
+  text-decoration: none;
+  font-weight: 700;
+  color: $texte;
 }
-.contenu__texte{
-    margin-bottom:24px;
+
+.contenu__texte {
+  margin-bottom: 24px;
+}
+.projets {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.projets .bouton {
+  width: 100%;       
+  height: auto;      
+  margin-bottom: 0;  
+}
+.projets__separator {
+  display: none; 
+}
+
+@media (min-width: 1025px) {
+  .projets__rux,
+  .projets__janus,
+  .projets__DF,
+  .projets__credit {
+    max-height: none;            
+    height: auto;                 
+    position: relative;
+    overflow: hidden;             
+    transform: translateZ(0);     
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+
+  .projets__rux-contenu,
+  .projets__janus-contenu,
+  .projets__DF-contenu {
+    opacity: 1;                
+    margin: 24px;
+    margin-top: 24px;             
+    transition: none;            
+  }
+
+  .projets__rux-header,
+  .projets__janus-header,
+  .projets__DF-header {
+    position: absolute;
+    inset: 0;                
+    background: $troisieme; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    transform: translateY(0%); 
+    transition: transform .45s ease;
+    pointer-events: none;        
+  }
+
+  .projets__rux-titre,
+  .projets__janus-titre,
+  .projets__DF-titre {
+    margin: 0;                    
+    text-align: center;
+  }
+
+  .projets__rux-fleche,
+  .projets__janus-fleche,
+  .projets__DF-fleche {
+    display: none;
+  }
+
+  .projets__rux:hover .projets__rux-header,
+  .projets__janus:hover .projets__janus-header,
+  .projets__DF:hover .projets__DF-header {
+    transform: translateY(-100%);
+  }
+
+  .projets__rux:hover,
+  .projets__janus:hover,
+  .projets__DF:hover,
+  .projets__credit:hover {
+    transform: scale(1.02);      
+    transition: transform .25s ease;
+  }
+
+  .projets__rux--active,
+  .projets__janus--active,
+  .projets__DF--active {
+    max-height: none;
+  }
+
+  .projets {
+    display: flex;      
+    flex-direction: row;
+    flex-wrap: wrap;    
+    gap: 48px;
+    align-items: stretch;
+    justify-content: center;
+    position: relative;
+  }
+
+  .projets .bouton {
+    flex: 0 0 250px;  
+    height: 400px;    
+    overflow: hidden; 
+  }
+
+  .projets__separator {
+    display: block;
+    height: 250px; 
+    background: rgba($texte, 0.7);
+    flex: 0 0 3px;          
+    align-self: center;     
+    margin-left: 24px;
+    margin-right: 24px;
+  }
 }
 .footer{
     background-color: rgba($premier,0.85);

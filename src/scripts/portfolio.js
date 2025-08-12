@@ -24,24 +24,42 @@ function onScroll() {
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
-//Ici n'a pas eu d'usage d'IA
-const ruxouvert = document.querySelector('.projets__rux');
-const ruxfermé = document.querySelector('.projets__rux-header');
+const DESKTOP_BREAKPOINT = 1025;
 
-const janusouvert = document.querySelector('.projets__janus');
-const janusfermé = document.querySelector('.projets__janus-header');
+function isDesktop() {
+  return window.innerWidth >= DESKTOP_BREAKPOINT;
+}
 
-const DFouvert = document.querySelector('.projets__DF');
-const DFfermé = document.querySelector('.projets__DF-header');
+function activeClassFor(card) {
+  const base = [...card.classList].find(c => c.startsWith('projets__') && !c.includes('--'));
+  return base ? `${base}--active` : null;
+}
 
-ruxfermé.addEventListener('click', () => {
-  ruxouvert.classList.toggle('projets__rux--active');
-});
+function wireUp() {
+  document.querySelectorAll('.bouton').forEach(card => {
+    const clone = card.cloneNode(true);
+    card.replaceWith(clone);
+  });
 
-janusfermé.addEventListener('click', () => {
-  janusouvert.classList.toggle('projets__janus--active');
-});
+  document.querySelectorAll('.bouton').forEach(card => {
+    const link = card.querySelector('.contenu__lien');
+    const header = card.querySelector('[class$="header"]') || card;
+    const activeClass = activeClassFor(card);
 
-DFfermé.addEventListener('click', () => {
-  DFouvert.classList.toggle('projets__DF--active');
-});
+    if (isDesktop()) {
+      if (link) {
+        card.addEventListener('click', (e) => {
+          if (e.target.closest('a')) return;
+          window.location.href = link.href;
+        });
+      }
+    } else {
+      header.addEventListener('click', (e) => {
+        if (e.target.closest('.contenu__lien')) return;
+        if (activeClass) card.classList.toggle(activeClass);
+      });
+    }
+  });
+}
+
+window.addEventListener('resize', wireUp);
