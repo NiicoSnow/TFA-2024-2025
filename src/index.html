@@ -30,8 +30,20 @@
 </head>
 <body>
   <div class="parallax-bg" aria-hidden="true"></div>
-  <header class="header grid">
-    <nav class="header__nav"></nav>
+  <header id="header" class="header grid">
+    <nav class="header__nav">
+      <button class="menu__btn"></button>
+      <div class="blur-overlay hidden"></div>
+      <ul class="menu__liste">
+        <li>
+          <ul class="menu__liste-clé">
+            <li class="menu__el"><a href="#header" class="menu__link">Accueil</a></li>
+            <li class="menu__el"><a href="#description" class="menu__link">Description</a></li>
+            <li class="menu__el"><a href="#projets" class="menu__link">Projets</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
     <h1 class="header__titre">Nicolas Lefebvre</h1>
     <h2 class="header__soustitre">Etudiant à la Haute Ecole Albert Jacquard en Web Design Transmédia</h2>
     <div class="header__image"></div>
@@ -52,14 +64,15 @@
       </a>
     </div>
   </section>
-  <section class="section description grid">
+  <section id="description" class="section description grid">
     <div>
       <h2 class="description__titre">Bonjour et bienvenue !</h2>
       <p class="description__texte">Je m'appelle Nicolas Lefebvre, étudiant en Web Design à la Haute École Albert Jacquard. Passionné par l'univers du numérique, j'ai choisi cette formation pour donner vie à mes idées à travers des interfaces modernes, créatives et intuitives.</p>
       <p class="description__texte">Mon objectif ? Créer des expériences web immersives, accessibles et esthétiques, en mêlant design, technologie et storytelling.</p>
     </div>
   </section>
-  <section class="section projets grid">
+  <section id="projets" class="section projets grid">
+    <h2 class="projets__titre">Projets</h2>
     <div class="projets__rux bouton">
       <div class="projets__rux-header">
         <h2 class="projets__rux-titre">RUX</h2>

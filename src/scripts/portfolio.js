@@ -5,6 +5,41 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
+
+const menu = document.querySelector(".header__nav");
+const menuBtn = document.querySelector(".menu__btn");
+const blurOverlay = document.querySelector(".blur-overlay");
+
+menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("menu--open");
+    blurOverlay.classList.toggle("hidden");
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+document.querySelectorAll('.btncmd').forEach(button => {
+    button.addEventListener('click', () => {
+      const target = document.querySelector(button.dataset.target);
+      if (target) {
+        gsap.to(window, {
+          scrollTo: target,
+          duration: 2,
+          ease: 'power2.inOut'
+        });
+      }
+    });
+  });
+
 const PARALLAX_FACTOR = 0.02;
 
 const bg = document.querySelector('.parallax-bg');
