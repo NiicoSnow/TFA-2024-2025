@@ -27,18 +27,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
-document.querySelectorAll('.btncmd').forEach(button => {
-    button.addEventListener('click', () => {
-      const target = document.querySelector(button.dataset.target);
-      if (target) {
-        gsap.to(window, {
-          scrollTo: target,
-          duration: 2,
-          ease: 'power2.inOut'
-        });
-      }
-    });
-  });
 
 const PARALLAX_FACTOR = 0.02;
 
