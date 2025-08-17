@@ -48,11 +48,11 @@ body{
 }
 .header__soustitre{
     color:#BFBFBF;
-    margin-bottom:112px ;
+    margin-bottom:48px ;
 }
 .header__image{
-    height: 400px;
-    background-color: #BFBFBF;
+    height: 500px;
+    justify-self: center;
 }
 .header__nav {
     display: flex;
@@ -533,9 +533,6 @@ p{
         width: 110%;
         height: 110%;
     }
-    .header{
-        height: 900px;
-    }
     .header__nav{
         width: calc(100% + 96px);
         margin-left: -48px;
@@ -544,6 +541,7 @@ p{
     }
     .header__titre{
         font-size: 80px;
+        grid-column: 1/span 5;
     }
     .header__soustitre{
         grid-column: 1/span 5;
@@ -551,6 +549,9 @@ p{
     }
     .header__image{
         grid-column: 6/span 3;
+        height: auto;
+        width: 100%;
+        margin-bottom: 24px;
     }
     .menu__btn{
         display: none;

@@ -10,8 +10,9 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
   const menu     = document.querySelector(".header__nav");
   const menuBtn  = document.querySelector(".menu__btn");
   const overlay  = document.querySelector(".blur-overlay");
+  const moi = document.querySelector(".header__image")
 
-  if (!menu || !menuBtn || !overlay) return; // pas de header/menu => on sort
+  if (!menu || !menuBtn || !overlay || !moi) return; // pas de header/menu => on sort
 
   menuBtn.addEventListener("click", () => {
     menu.classList.toggle("menu--open");
@@ -22,6 +23,13 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
     menu.classList.remove("menu--open");
     overlay.classList.add("hidden");
   });
+
+  moi.addEventListener("mouseover",() => {
+    moi.src = "assets/images/moi__2.webp"
+  })
+  moi.addEventListener("mouseout",() => {
+    moi.src = "assets/images/moi__1.webp"
+  })
 })();
 
 
