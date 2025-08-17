@@ -24,6 +24,7 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
   });
 })();
 
+
 // ============ ANCRAGES SMOOTH (optionnel, safe) ============
 (function initAnchors() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
