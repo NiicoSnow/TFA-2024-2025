@@ -21,21 +21,29 @@
     <link rel="stylesheet" href="styles/portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="../scripts/portfolio.js" defer></script>
 </head>
 <body>
     <!-- je n'ai pas utilisé d'IA pour mon html-->
+     <div class="parallax-bg" aria-hidden="true"></div>
    <header class="header grid">
-        <nav class="header__nav">
-            <h1 class="header__nav-titre"> Nicolas Lefebvre - JANUS</h1>
+        <nav class="headerCS__nav">
+            <ul class="menu__liste">
+                <li>
+                    <ul class="menu__liste-clé">
+                        <li class="menu__el"><a href="#header" class="menu__link">Accueil</a></li>
+                        <li class="menu__el"><a href="#description" class="menu__link">Description</a></li>
+                        <li class="menu__el"><a href="#projets" class="menu__link">Projets</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
-        <div class="header__banner">
-            <img class="header__img" src="assets/images/janus/bannerjanus.webp" srcset="assets/images/janus/bannerjanusx2.webp 2x" alt="aperçu de mes pages Janus en une images">
-            <div class="header__overlay"></div>
-            <h1 class="header__title">Projet&nbsp;JANUS<span class="passageligne"> Case&nbsp;Study</span></h1>
-        </div>
-        <div class="header__retour">
-            <a class="header__retour-texte" href="index.html">‹</a>
+        <div class="headerCS__banner">
+            <img class="headerCS__image" src="assets/images/janus/bannerjanus.webp" srcset="assets/images/janus/bannerjanusx2.webp 2x" alt="aperçu de mes pages Janus en une images">
+            <div class="headerCS__overlay"></div>
+            <h1 class="headerCS__title">Projet&nbsp;JANUS<span class="passageligne"> Case&nbsp;Study</span></h1>
         </div>
    </header>
    <main>

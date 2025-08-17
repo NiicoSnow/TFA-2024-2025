@@ -1,57 +1,70 @@
-'use strict'
+'use strict';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
+// ============ MENU (optionnel, safe) ============
+(function initMenu() {
+  const menu     = document.querySelector(".header__nav");
+  const menuBtn  = document.querySelector(".menu__btn");
+  const overlay  = document.querySelector(".blur-overlay");
 
-const menu = document.querySelector(".header__nav");
-const menuBtn = document.querySelector(".menu__btn");
-const blurOverlay = document.querySelector(".blur-overlay");
+  if (!menu || !menuBtn || !overlay) return; // pas de header/menu => on sort
 
-menuBtn.addEventListener("click", () => {
+  menuBtn.addEventListener("click", () => {
     menu.classList.toggle("menu--open");
-    blurOverlay.classList.toggle("hidden");
-});
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
+    overlay.classList.toggle("hidden");
   });
-});
 
-const PARALLAX_FACTOR = 0.02;
+  overlay.addEventListener("click", () => {
+    menu.classList.remove("menu--open");
+    overlay.classList.add("hidden");
+  });
+})();
 
-const bg = document.querySelector('.parallax-bg');
-
-let ticking = false;
-function onScroll() {
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      const y = -window.scrollY * PARALLAX_FACTOR;
-      bg.style.transform = `translateY(${y}px) translateZ(0)`;
-      ticking = false;
+// ============ ANCRAGES SMOOTH (optionnel, safe) ============
+(function initAnchors() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const href = anchor.getAttribute('href');
+      const target = href ? document.querySelector(href) : null;
+      if (!target) return; // si l’ancre n’existe pas, on laisse le comportement normal
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
     });
-    ticking = true;
-  }
-}
+  });
+})();
 
-window.addEventListener('scroll', onScroll, { passive: true });
-onScroll();
+// ============ PARALLAXE ============
+(function initParallax() {
+  const bg = document.querySelector('.parallax-bg');
+  if (!bg) return; // pas de calque => on sort
 
+  const PARALLAX_FACTOR = 0.02;
+  let ticking = false;
+
+  const update = () => {
+    const y = -window.scrollY * PARALLAX_FACTOR;
+    bg.style.transform = `translateY(${y}px) translateZ(0)`;
+    ticking = false;
+  };
+
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  update();
+})();
+
+// ============ CARTES / BOUTONS ============
 const DESKTOP_BREAKPOINT = 1025;
-
-function isDesktop() {
-  return window.innerWidth >= DESKTOP_BREAKPOINT;
-}
+const isDesktop = () => window.innerWidth >= DESKTOP_BREAKPOINT;
 
 function activeClassFor(card) {
   const base = [...card.classList].find(c => c.startsWith('projets__') && !c.includes('--'));
@@ -77,12 +90,15 @@ function wireUp() {
         });
       }
     } else {
-      header.addEventListener('click', (e) => {
-        if (e.target.closest('.contenu__lien')) return;
-        if (activeClass) card.classList.toggle(activeClass);
-      });
+      if (header && activeClass) {
+        header.addEventListener('click', (e) => {
+          if (e.target.closest('.contenu__lien')) return;
+          card.classList.toggle(activeClass);
+        });
+      }
     }
   });
 }
 
-window.addEventListener('resize', wireUp);
+wireUp();
+window.addEventListener('resize', () => wireUp());

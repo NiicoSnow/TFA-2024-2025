@@ -4,7 +4,7 @@
     <!-- j'ai demandé à une IA de me remplir mes métas par rapport à mon contenu-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <meta name="description" content="Découvrez comment notre projet 'Rethinking UX' repense l'aménagement de la salle A084 à la HEAJ. De la recherche utilisateur aux prototypes 2D/3D, suivez notre étude de cas pour transformer cet espace en un lieu ergonomique, collaboratif et stimulant.">
     <meta name="keywords" content="Rethinking UX, HEAJ, salle A084, aménagement, étude de cas, design thinking, ergonomie, prototypes, expérience utilisateur">
 
@@ -21,68 +21,76 @@
     <link rel="stylesheet" href="styles/portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="scripts/portfolio.js" defer></script>
 </head>
 <body>
     <!-- je n'ai pas utilisé d'IA pour mon html-->
-   <header class="header grid">
-        <nav class="header__nav">
-            <h1 class="header__nav-titre"> Nicolas Lefebvre - RUX</h1>
+    <div class="parallax-bg" aria-hidden="true"></div>
+    <header class="header grid">
+        <nav class="headerCS__nav">
+            <ul class="menu__liste">
+                <li>
+                    <ul class="menu__liste-clé">
+                        <li class="menu__el"><a href="#header" class="menu__link">Accueil</a></li>
+                        <li class="menu__el"><a href="#description" class="menu__link">Description</a></li>
+                        <li class="menu__el"><a href="#projets" class="menu__link">Projets</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
-        <div class="header__banner">
-            <img class="header__img" src="assets/images/rux/image1.webp" srcset="assets/images/rux/image1x2.webp 2x" alt="image de la pièce à changer actuellement">
-            <div class="header__overlay"></div>
-            <h1 class="header__title">Projet&nbsp;Rethinking&nbsp;UX <span class="passageligne"> Case&nbsp;Study</span></h1>
-        </div>
-        <div class="header__retour">
-            <a class="header__retour-texte" href="index.html">‹</a>
+        <div class="headerCS__banner">
+            <img class="headerCS__image" src="assets/images/rux/image1.webp" srcset="assets/images/rux/image1x2.webp 2x" alt="image de la pièce à changer actuellement">
+            <div class="headerCS__overlay"></div>
+            <h1 class="headerCS__title">Projet&nbsp;Rethinking&nbsp;UX <span class="passageligne"> Case&nbsp;Study</span></h1>
         </div>
    </header>
    <main>
         <section class="gridOut">
-            <div class="section contexte grid">
-                <h2 class="contexte__title">Le contexte</h2>
-                <p class="contexte__text">Dans le cadre de l'UE Rethinking UX (RUX) 24-25, notre groupe (numéro 1), composé de Nicolas Lefebvre, Théo Colpaert, Hasan Hakka, Adrien Fraiture et Maxime Moreau réalise un projet visant à repenser l'aménagement de la salle A084 afin d'améliorer l'expérience des étudiants. Actuellement, cette salle présente un aménagement minimaliste, avec seulement quelques bancs et un grand espace vide, ce qui limite son potentiel. </p>
-                <p class="contexte__text">L'objectif de cette étude est donc de comprendre les besoins réels des utilisateurs - en l'occurrence, les étudiants de la HEAJ - afin de concevoir des solutions adaptées qui favorisent un environnement plus ergonomique, collaboratif et stimulant. Grâce à une approche centrée sur l'utilisateur et une méthodologie itérative, nous explorerons différentes pistes d'aménagement et mettrons en place des améliorations concrètes pour optimiser l'usage de cette salle.</p>
+            <div class="sectionCS contexte grid">
+                <h2 class="contexte__title h2CS">Le contexte</h2>
+                <p class="contexte__text textCS">Dans le cadre de l'UE Rethinking UX (RUX) 24-25, notre groupe (numéro 1), composé de Nicolas Lefebvre, Théo Colpaert, Hasan Hakka, Adrien Fraiture et Maxime Moreau réalise un projet visant à repenser l'aménagement de la salle A084 afin d'améliorer l'expérience des étudiants. Actuellement, cette salle présente un aménagement minimaliste, avec seulement quelques bancs et un grand espace vide, ce qui limite son potentiel. </p>
+                <p class="contexte__text textCS">L'objectif de cette étude est donc de comprendre les besoins réels des utilisateurs - en l'occurrence, les étudiants de la HEAJ - afin de concevoir des solutions adaptées qui favorisent un environnement plus ergonomique, collaboratif et stimulant. Grâce à une approche centrée sur l'utilisateur et une méthodologie itérative, nous explorerons différentes pistes d'aménagement et mettrons en place des améliorations concrètes pour optimiser l'usage de cette salle.</p>
             </div>
             <img class="photos contexte__photo" src="assets/images/rux/image3.webp" srcset="assets/images/rux/image3x2.webp 2x" alt="photo reprenant une majorité de la pièce actuelle">
         </section>
         <section class="gridOut">
-            <div class="section recherche grid">
-                <h2 class="recherche__title">Recherche et Analyse</h2>
-                <p class="recherche__text">Une réflexion collective, au sein du groupe de cinq, a permis de définir plusieurs questions à poser aux étudiants concernant l'utilisation future du local. Pour avancer plus efficacement dans le travail, il s'est avéré nécessaire de répartir les tâches entre les différents membres. Par exemple, pendant que certains membres du groupe cherchaient de nouvelles questions, Adrien démarrait la conception du Google Form.</p>
-                <p class="recherche__text">Une fois le questionnaire terminé, la décision a été prise de faire un premier tour dans l'école, de façon à recueillir les premiers témoignages d'étudiants. Le questionnaire a aussi été partagé en ligne via nos réseaux sociaux, afin de toucher le plus grand nombre de personnes possible.</p>
-                <p class="recherche__text">Le groupe a aussi réfléchi aux choses importantes à regarder dans le local, pour préparer la future “visite”, telles que le nombre de prises disponibles et la luminosité.</p>
+            <div class="sectionCS recherche grid">
+                <h2 class="recherche__title h2CS">Recherche et Analyse</h2>
+                <p class="recherche__text textCS">Une réflexion collective, au sein du groupe de cinq, a permis de définir plusieurs questions à poser aux étudiants concernant l'utilisation future du local. Pour avancer plus efficacement dans le travail, il s'est avéré nécessaire de répartir les tâches entre les différents membres. Par exemple, pendant que certains membres du groupe cherchaient de nouvelles questions, Adrien démarrait la conception du Google Form.</p>
+                <p class="recherche__text textCS">Une fois le questionnaire terminé, la décision a été prise de faire un premier tour dans l'école, de façon à recueillir les premiers témoignages d'étudiants. Le questionnaire a aussi été partagé en ligne via nos réseaux sociaux, afin de toucher le plus grand nombre de personnes possible.</p>
+                <p class="recherche__text textCS">Le groupe a aussi réfléchi aux choses importantes à regarder dans le local, pour préparer la future “visite”, telles que le nombre de prises disponibles et la luminosité.</p>
             </div>
-            <div class="section analyse grid">
-                <p class="analyse__text first-text">Une fois la visite effectuée (uniquement à partir du local A083, car le local était fermé), la réflexion a porté sur les améliorations à envisager pour le local. Théo a réalisé un premier plan sur papier de la situation du local. Ce plan a permis de voir rapidement les aménagements réalisables ou non. Cette visite à permis de noter que dans le local, il y a seulement 5 prises visibles (le local était rempli de caisses, ce qui rendait difficile de faire des observations précises).</p>
-                <p class="analyse__text">Ensuite, le groupe a commencé à relever les résultats du sondage. Qui révèle que les étudiants souhaitent en majorité un local de détente (67%). Au niveau de la luminosité de la salle, il semble que les étudiants interrogés préfèrent une lumière tamisée. Une musique d'ambiance (Lofi par exemple) pourrait être un plus, mais n'est pas obligatoire. Par rapport aux meubles, le confort semble important, en effet, les mots poufs et canapés ont été très souvent cités. En parallèle, Adrien et Hasan ont commencé à faire un prototype de mise en place du mobilier dans le local, en retouchant les photos mises à disposition par les professeurs.</p>
-                <p class="analyse__text">Une première mise en commun des résultats entre les différents groupes a été proposée, mais ne nous a pas aidé à clarifier les attentes des étudiants.</p>
+            <div class="sectionCS analyse grid">
+                <p class="analyse__text first-text textCS">Une fois la visite effectuée (uniquement à partir du local A083, car le local était fermé), la réflexion a porté sur les améliorations à envisager pour le local. Théo a réalisé un premier plan sur papier de la situation du local. Ce plan a permis de voir rapidement les aménagements réalisables ou non. Cette visite à permis de noter que dans le local, il y a seulement 5 prises visibles (le local était rempli de caisses, ce qui rendait difficile de faire des observations précises).</p>
+                <p class="analyse__text textCS">Ensuite, le groupe a commencé à relever les résultats du sondage. Qui révèle que les étudiants souhaitent en majorité un local de détente (67%). Au niveau de la luminosité de la salle, il semble que les étudiants interrogés préfèrent une lumière tamisée. Une musique d'ambiance (Lofi par exemple) pourrait être un plus, mais n'est pas obligatoire. Par rapport aux meubles, le confort semble important, en effet, les mots poufs et canapés ont été très souvent cités. En parallèle, Adrien et Hasan ont commencé à faire un prototype de mise en place du mobilier dans le local, en retouchant les photos mises à disposition par les professeurs.</p>
+                <p class="analyse__text textCS">Une première mise en commun des résultats entre les différents groupes a été proposée, mais ne nous a pas aidé à clarifier les attentes des étudiants.</p>
             </div>
             <img class="photo__graphique" src="assets/images/rux/graphique.webp" alt="graphique">
         </section>
         <section class="gridOut margin">
-            <div class="section commun grid ">
-                <h2 class="commun__title">Mise en commun</h2>
-                <p>Après l'échec de la première mise en commun, Mr Selamet a proposé d'en faire une nouvelle, mais plus encadrée. Cela a permis de tirer des conclusions plus globales, pour aménager au mieux le local en fonction des besoins, de non plus 20 étudiants mais de 120. En effet, plus le groupe cible est vaste, plus les résultats sont représentatifs de leurs attentes.</p>
-                <p>Concernant les résultats, il s'est avéré que la majorité des étudiants interrogés (par l'ensemble des groupes) souhaite une salle de détente plutôt qu'une salle d'étude. Nos résultats (exprimés plus haut) ne font donc pas exception.</p>
+            <div class="sectionCS commun grid ">
+                <h2 class="commun__title h2CS">Mise en commun</h2>
+                <p class="commun__texte textCS">Après l'échec de la première mise en commun, Mr Selamet a proposé d'en faire une nouvelle, mais plus encadrée. Cela a permis de tirer des conclusions plus globales, pour aménager au mieux le local en fonction des besoins, de non plus 20 étudiants mais de 120. En effet, plus le groupe cible est vaste, plus les résultats sont représentatifs de leurs attentes.</p>
+                <p class="commun__texte textCS">Concernant les résultats, il s'est avéré que la majorité des étudiants interrogés (par l'ensemble des groupes) souhaite une salle de détente plutôt qu'une salle d'étude. Nos résultats (exprimés plus haut) ne font donc pas exception.</p>
             </div>
             <img class="photos commun__photo" src="assets/images/rux/imageRéu.webp" srcset="assets/images/rux/imageRéux2.webp 2x" alt="photo reprenant une majorité de la pièce actuelle">
         </section>
         <section class="gridOut margin">
-            <div class="section repartition grid ">
-                <h2 class="repartition__title">Répartition des tâches</h2>
-                <p class="repartition__text">Afin de rendre notre travail plus efficace, il a été décidé avec les autres groupes de nous répartir l'espace du local. Un groupe va travailler sur le design des portes, un autre va aménager le petit local (A083) ainsi que le coin fenêtre. Un troisième groupe s'occupera de la décoration des murs. Quant à notre groupe, il va s'occuper du reste, c'est-à-dire l'aménagement de la longueur de la salle (6m de large et 12m de long). Il a aussi été décidé que tous les groupes resteront “en contact” tout au long du projet. Cela va permettre de conserver un style cohérent notemment au niveau des couleurs du mobilier et des murs.</p>
-                <p class="repartition__text">Pendant la répartition des tâches (qui s'est faite en même temps qu'une nouvelle visite du A083), différents groupes en ont profité pour faire des photos et prendre les mesures approximatives du local. Ces photos ont été mises en commun pour que chaque groupe puisse en profiter. Pour nous faire une idée du matériel à placer et de la manière dont nous allons le disposer, Hasan a réalisé un modèle 3D de la salle en utilisant Spline 3D. Cela nous a permis de tester rapidement différents designs et de mieux visualiser notre projet.</p>
+            <div class="sectionCS repartition grid ">
+                <h2 class="repartition__title h2CS">Répartition des tâches</h2>
+                <p class="repartition__text textCS">Afin de rendre notre travail plus efficace, il a été décidé avec les autres groupes de nous répartir l'espace du local. Un groupe va travailler sur le design des portes, un autre va aménager le petit local (A083) ainsi que le coin fenêtre. Un troisième groupe s'occupera de la décoration des murs. Quant à notre groupe, il va s'occuper du reste, c'est-à-dire l'aménagement de la longueur de la salle (6m de large et 12m de long). Il a aussi été décidé que tous les groupes resteront “en contact” tout au long du projet. Cela va permettre de conserver un style cohérent notemment au niveau des couleurs du mobilier et des murs.</p>
+                <p class="repartition__text textCS">Pendant la répartition des tâches (qui s'est faite en même temps qu'une nouvelle visite du A083), différents groupes en ont profité pour faire des photos et prendre les mesures approximatives du local. Ces photos ont été mises en commun pour que chaque groupe puisse en profiter. Pour nous faire une idée du matériel à placer et de la manière dont nous allons le disposer, Hasan a réalisé un modèle 3D de la salle en utilisant Spline 3D. Cela nous a permis de tester rapidement différents designs et de mieux visualiser notre projet.</p>
             </div>
             <img class="photos repartition__photo1" src="assets/images/rux/image1x2.webp" srcset="assets/images/rux/image1x2.webp 2x" alt="photo reprenant une bonne partie de la zone que nous allons changer ">
             <img class="photos repartition__photo2" src="assets/images/rux/Imagecarton.webp" srcset="assets/images/rux/Imagecartonx2.webp 2x" alt="photo reprenant un coin de la zone que nous allons changer">
         </section>
         <section class="gridOut margin">
-            <div class="section plans grid ">
-                <h2 class="plans__title">Quelques plans et photos modifiées</h2>
-                <p class="plans__text">Différents plans en vue de dessus ont été réalisés (sur Figma), en variant la disposition du mobilier. Ces plans ont ensuite été proposés au reste de la classe, ce qui a permis de recueillir des retours sur l'agencement jugé le plus cohérent en fonction de l'espace disponible. Le plan qui a été retenu (3,5), allie un coin détente (avec des poufs) et une zone de travail (où des ordinateurs sont mis à disposition des élèves). Des tables sont aussi disposées dans la salle pour offrir un endroit de travail ou de divertissement.</p>
-                <p class="plans__text">Adrien et Maxime ont continué de modifier les photos, en les adaptant au plan qui a été retenu par les autres membres de la classe. Ces photos retouchées (montrant les meubles et leurs dispositions), nous permettent de nous projeter dans le futur et de voir la classe une fois aménagée.</p>
+            <div class="sectionCS plans grid ">
+                <h2 class="plans__title h2CS">Quelques plans et photos modifiées</h2>
+                <p class="plans__text textCS">Différents plans en vue de dessus ont été réalisés (sur Figma), en variant la disposition du mobilier. Ces plans ont ensuite été proposés au reste de la classe, ce qui a permis de recueillir des retours sur l'agencement jugé le plus cohérent en fonction de l'espace disponible. Le plan qui a été retenu (3,5), allie un coin détente (avec des poufs) et une zone de travail (où des ordinateurs sont mis à disposition des élèves). Des tables sont aussi disposées dans la salle pour offrir un endroit de travail ou de divertissement.</p>
+                <p class="plans__text textCS">Adrien et Maxime ont continué de modifier les photos, en les adaptant au plan qui a été retenu par les autres membres de la classe. Ces photos retouchées (montrant les meubles et leurs dispositions), nous permettent de nous projeter dans le futur et de voir la classe une fois aménagée.</p>
             </div>
             <img class="photos plans__photo1" src="assets/images/rux/plans.webp" alt="image de plusieurs plan en 2D vue du haut pour voir les dispositions possibles">
             <img class="photos plans__photo2" src="assets/images/rux/ImageMontage1.webp" srcset="assets/images/rux/ImageMontage1x2.webp 2x" alt="photo monté pour voir à quoi ressemble la longueur de la piece avec des éléments ajoutés">
@@ -90,17 +98,17 @@
             <img class="photos plans__photo4" src="assets/images/rux/SalleDetente.webp" srcset="assets/images/rux/SalleDetentex2.webp 2x" alt="image de la piece en 3d pour s'imaginer l'espace">
         </section>
         <section class="gridOut margin">
-            <div class="section marché grid ">
-                <h2 class="marché__title">Une étude de marché</h2>
-                <p class="marché__text">Étant donné que l'école n'a pas de poufs, il a fallu, sur les conseils de Mr Selamet, réaliser une petite étude marché. De cette manière, la direction verra le budget qu'il faut allouer à l'achat de ce matériel supplémentaire (si elle le juge nécessaire). Pour avoir une idée du prix d'un tel objet, il a été décidé de consulter le marché du neuf et de l'occasion.</p>
-                <p class="marché__text">La question des plantes, le local accueille déjà une plante, mais il semble qu'elle ne soit pas en pleine forme.. Dans notre réflexion, nous pensions la remplacer par des plantes artificielles pour limiter la demande en entretien. Mais là aussi, il faut faire une étude de marché.</p>
+            <div class="sectionCS marché grid ">
+                <h2 class="marché__title h2CS">Une étude de marché</h2>
+                <p class="marché__text textCS">Étant donné que l'école n'a pas de poufs, il a fallu, sur les conseils de Mr Selamet, réaliser une petite étude marché. De cette manière, la direction verra le budget qu'il faut allouer à l'achat de ce matériel supplémentaire (si elle le juge nécessaire). Pour avoir une idée du prix d'un tel objet, il a été décidé de consulter le marché du neuf et de l'occasion.</p>
+                <p class="marché__text textCS">La question des plantes, le local accueille déjà une plante, mais il semble qu'elle ne soit pas en pleine forme.. Dans notre réflexion, nous pensions la remplacer par des plantes artificielles pour limiter la demande en entretien. Mais là aussi, il faut faire une étude de marché.</p>
             </div>
         </section>
         <section class="gridOut margin">
-            <div class="section problemes grid ">
-                <h2 class="problemes__title">Les problèmes rencontrés</h2>
-                <p class="problemes__text">Durant notre périple, le groupe a dû faire face à plusieurs problématiques telles que :</p>
-                <ul class="problemes__list">
+            <div class="sectionCS problemes grid ">
+                <h2 class="problemes__title h2CS">Les problèmes rencontrés</h2>
+                <p class="problemes__text textCS">Durant notre périple, le groupe a dû faire face à plusieurs problématiques telles que :</p>
+                <ul class="problemes__list textCS">
                     <li>le local qui était fermé ;</li>
                     <li>le local était rempli de carton, ce qui a nécessité du travail supplémentaire sur Photoshop ;</li>
                     <li>grève des transports en commun qui a empêché certains membres du groupe de venir</li>
@@ -108,29 +116,23 @@
             </div>
         </section>
         <section class="gridOut margin">
-            <div class="section code grid ">
-                <h2 class="code__title">Le code</h2>
-                <p class="code__text">Dans le cadre de ce projet, il était également demandé de réaliser un case study personnel, accessible en ligne. Pour cela, j'ai uniquement utilisé HTML et CSS, sans JavaScript. Le développement de cette page m'a pris environ deux à trois jours. J'ai utilisé le logiciel Figma pour le prototype avant de réellement coder.</p>
+            <div class="sectionCS code grid ">
+                <h2 class="code__title h2CS">Le code</h2>
+                <p class="code__text textCS">Dans le cadre de ce projet, il était également demandé de réaliser un case study personnel, accessible en ligne. Pour cela, j'ai uniquement utilisé HTML et CSS, sans JavaScript. Le développement de cette page m'a pris environ deux à trois jours. J'ai utilisé le logiciel Figma pour le prototype avant de réellement coder.</p>
             </div>
         </section>
         <section class="gridOut margin">
-            <div class="section conclusion grid ">
-                <h2 class="conclusion__title">Conclusion</h2>
-                <p class="conclusion__text">Ce projet a montré que la répartition des tâches (interne dans le groupe de 5 mais aussi avec les autres groupes) est un point important pour garantir une progression rapide et structurée. Les mises en commun avec les autres groupes sont importantes, car elles permettent de voir si tout le monde a bien la même compréhension des besoins des étudiants. Faire des plans 2D et 3D de la salle à permis d'explorer de nombreuses possibilités de manière simple et rapide, tout au long du projet. Il est important, tout au long du projet, de toujours garder en tête les besoins des étudiants. Enfin, il est important d'anticiper le budget nécessaire à la réalisation du projet.</p>
-                <p class="conclusion__text">PS: On s'est bien amusés</p>
+            <div class="sectionCS conclusion grid ">
+                <h2 class="conclusion__title h2CS">Conclusion</h2>
+                <p class="conclusion__text textCS">Ce projet a montré que la répartition des tâches (interne dans le groupe de 5 mais aussi avec les autres groupes) est un point important pour garantir une progression rapide et structurée. Les mises en commun avec les autres groupes sont importantes, car elles permettent de voir si tout le monde a bien la même compréhension des besoins des étudiants. Faire des plans 2D et 3D de la salle à permis d'explorer de nombreuses possibilités de manière simple et rapide, tout au long du projet. Il est important, tout au long du projet, de toujours garder en tête les besoins des étudiants. Enfin, il est important d'anticiper le budget nécessaire à la réalisation du projet.</p>
+                <p class="conclusion__text textCS">PS: On s'est bien amusés</p>
             </div>
         </section>
    </main>
    <footer class="footer grid margin">
-    <div class="footer-content">
-        <div class="text-content">
-            <p class="nom">Nicolas Lefebvre</p>
-            <p class="project">PROJET RUX 2024-2025</p>
-        </div>
-        <div class="logo">
-            <a href="https://www.heaj.be/fr/" target="_blank"><img src="assets/images/rux/logo_HEAJ-black.webp" alt="HEAJ Logo"></a>
-        </div>
-    </div>
-   </footer>
+    <p class="footer__titre">Contact :</p>
+    <p class="footer__texte">Nicolas.lefebvre@student.heaj.be</p>
+    <p class="footer__texte">0495 41 53 48</p>
+  </footer>
 </body>
 </html>
