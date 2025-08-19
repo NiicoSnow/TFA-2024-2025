@@ -27,6 +27,9 @@ body{
 .grid > * {
     grid-column: 1 / -1;
 }
+h3{
+    font-size: 28px;
+}
 .parallax-bg{
     position: fixed;
     top:0;
@@ -758,8 +761,6 @@ p{
     }
 }
 
-
-/*
 //crédit
 .crédit__portfolio{
     margin-top: 144px;
@@ -778,17 +779,18 @@ p{
     max-width: 535px;
 }
 .créditPrompts{
-    background-color: #303030;
-    color: #FFF;
+    background-color: $quatrieme;
+    color: $texte;
     padding: 24px;
-    border-radius: 10px;
     font-weight: 200;
     margin-bottom:12px;
 }
 .créditSection{
-    margin-bottom:96px
+    margin-bottom:96px;
+    background-color: rgba($premier,0.9);
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
-*/
 // @media (min-width: 1025px) { 
 //     //case study
 //     .gridOut{
