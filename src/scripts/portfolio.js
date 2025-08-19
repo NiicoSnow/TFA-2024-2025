@@ -10,27 +10,46 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
   const menu     = document.querySelector(".header__nav");
   const menuBtn  = document.querySelector(".menu__btn");
   const overlay  = document.querySelector(".blur-overlay");
-  const moi = document.querySelector(".header__image")
+  const moi      = document.querySelector(".header__image");
 
-  if (!menu || !menuBtn || !overlay || !moi) return; // pas de header/menu => on sort
+  if (!menu || !menuBtn || !overlay || !moi) return;
 
-  menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("menu--open");
-    overlay.classList.toggle("hidden");
-  });
+  const openMenu = () => {
+    menu.classList.add("menu--open");
+    overlay.classList.remove("hidden");
+    menuBtn.setAttribute("aria-expanded", "true");
+  };
 
-  overlay.addEventListener("click", () => {
+  const closeMenu = () => {
     menu.classList.remove("menu--open");
     overlay.classList.add("hidden");
+    menuBtn.setAttribute("aria-expanded", "false");
+  };
+
+  menuBtn.addEventListener("click", () => {
+    if (menu.classList.contains("menu--open")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
 
-  moi.addEventListener("mouseover",() => {
-    moi.src = "assets/images/moi__2.webp"
-  })
-  moi.addEventListener("mouseout",() => {
-    moi.src = "assets/images/moi__1.webp"
-  })
+  overlay.addEventListener("click", closeMenu);
+
+  menu.addEventListener("click", (e) => {
+    if (e.target.closest(".menu__link")) {
+      closeMenu();
+    }
+  });
+
+  moi.addEventListener("mouseover", () => {
+    moi.src = "assets/images/moi__2.webp";
+  });
+  moi.addEventListener("mouseout", () => {
+    moi.src = "assets/images/moi__1.webp";
+  });
 })();
+
 
 
 // ============ ANCRAGES SMOOTH (optionnel, safe) ============
