@@ -947,6 +947,8 @@ p{
         height: 117%;
     }
 }
+
+///tablette///
 @media (min-width: 500px) and (max-width: 1024px) {
     .projets__rux,
     .projets__janus,
@@ -970,12 +972,12 @@ p{
     h1{
         justify-self: center;
     }
-    // .photos{
-    //     max-width: 500px;
-    //     justify-self: center;
-    // }
-    // //crédit
-    // .créditSection{
-    //     justify-self: center;
-    // }
+    .créditSection{
+        display: grid;
+    }
+    //crédit
+    .créditSousTitre,
+    .créditSection{
+        justify-self: center;
+    }
 }
