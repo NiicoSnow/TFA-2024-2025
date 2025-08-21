@@ -16,6 +16,7 @@ body{
     font-weight: 400;
     overflow-x: hidden;
     color: $texte;
+    background-color: $premier;
 }
 .grid {
     display: grid;
@@ -34,8 +35,8 @@ h3{
     position: fixed;
     top:0;
     left:0;
-    width: 127%;
-    height: 127%;
+    width: 120%;
+    height: 120%;
     z-index: -1;
     background-image: url("../assets/images/galaxy1.webp");
     background-size: cover;
@@ -531,8 +532,10 @@ p{
 ////////////////////////////////////
 /////////////crédit////////////////
 //////////////////////////////////
-.crédit__portfolio{
-    margin-top: 144px;
+.headercrédit__titre{
+    font-size: 80px;
+    text-align: center;
+    margin-top: 48px;
 }
 .créditTitre{
     font-size: 40px;
@@ -837,6 +840,7 @@ p{
    .analyse {
         grid-column: 6/ span 3;
         grid-row: 2/ span 6;
+        margin-top: 96px;
    }
    .commun {
         grid-column: 2/ span 4;
@@ -937,14 +941,21 @@ p{
     ////////////////////////////////////
     /////////////crédit////////////////
     //////////////////////////////////
-    .créditSection{
-        justify-self: center;
+    .headercrédit__titre{
+        font-size: 80px;
+        text-align: center;
+        margin-top: 96px;
+        margin-bottom: 96px;
     }
+    .maincrédit{
+        display: grid;
+        justify-content: center;
+}
 }
 @media (min-width: 1550px) {
     .parallax-bg{
-        width: 117%;
-        height: 117%;
+        width: 115%;
+        height: 115%;
     }
 }
 
