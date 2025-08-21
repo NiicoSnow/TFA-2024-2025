@@ -47,6 +47,14 @@ img{
 .grid > * {
     grid-column: 1 / -1;
 }
+h3 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-top:0px;
+    margin-bottom:28px;
+}
+
+///menu///
 .header__nav {
     display: flex;
     width: calc(100% + 48px);
@@ -157,26 +165,6 @@ img{
     opacity: 1;
     pointer-events: all;
 }
-
-h3 {
-    font-weight: 700;
-    font-size: 20px;
-    margin-top:0px;
-    margin-bottom:28px;
-}
-.header__titre {
-    margin-top:24px
-}
-.icons{
-    display: flex;
-    flex-direction: row;
-    gap:24px;
-    margin-top:100px;
-    justify-content: center;
-    margin-right:24px;
-    list-style: none;
-    padding: 0;
-}
 .icons__profil{
     width: 30px;
     filter: none;
@@ -197,6 +185,24 @@ h3 {
 }
 .icons__flag:hover{
     filter: drop-shadow(0 0px 5px #0083c0);
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    gap:24px;
+    margin-top:100px;
+    justify-content: center;
+    margin-right:24px;
+    list-style: none;
+    padding: 0;
+}
+.menu__liste-clé{
+    padding: 0;
+}
+
+///header///
+.header__titre {
+    margin-top:24px
 }
 .btncmd{
     background-color: $bleu;
@@ -229,6 +235,7 @@ h3 {
     margin-top:-12px ;
     font-size: 28px;
 }
+///body///
 .écouteurdémo {
     width: 150%;
 }
@@ -555,6 +562,18 @@ canvas {
     width: 50%;
     justify-self: center;
 }
+.boutique__populaire{
+    font-weight: 900;
+    margin-bottom:0;
+    grid-column: 1/span 3;
+    margin-bottom:-4px;
+    text-align: center;
+    color: $bleu;
+    text-shadow: 0 0 4px $bleu;
+    display:none;
+}
+
+///footer///
 .footer {
     background-color: #000;
     box-shadow: 0 -2px 2px #01DBE8;
@@ -626,19 +645,8 @@ canvas {
 .footer__li:hover{
     text-decoration: underline $bleu;
 }
-.boutique__populaire{
-    font-weight: 900;
-    margin-bottom:0;
-    grid-column: 1/span 3;
-    margin-bottom:-4px;
-    text-align: center;
-    color: $bleu;
-    text-shadow: 0 0 4px $bleu;
-    display:none;
-}
-.menu__liste-clé{
-    padding: 0;
-}
+
+//////PC//////
 @media (min-width: 1025px) {
     .grid {
         grid-template-columns: repeat(9, 1fr);
@@ -647,12 +655,18 @@ canvas {
         padding-right: 48px;
         grid-template-rows: repeat(7, auto);
     }
-    .header__nav{
-        width: calc(100% + 96px);
-        margin-left: -48px;
-        justify-content: center;
-        padding:10px 48px;
+    p{
+        max-width: 600px;
     }
+    .inséparable{
+        font-weight: 300;
+        font-size: 20px;
+        display: flex;
+        justify-self: center;
+        margin-top:6px;
+    }
+
+    ///menu///
     .menu__btn{
         display: none;
     }
@@ -669,16 +683,9 @@ canvas {
         gap: 24px;
         background-color: #000;
     }
-    .header__nav-AIAirsound{
-        flex:0;
-        white-space: nowrap;
-        align-items: center;
-        height: 100%;
-        margin:0;
-    }
     .icons{
-        margin:0;
-        margin-left:24px;
+            margin:0;
+            margin-left:24px;
     }
     .icons__profil{
         width: 24px;
@@ -702,7 +709,21 @@ canvas {
         gap: 48px;
         list-style: none;
     }
-    
+
+    ///header///
+    .header__nav{
+        width: calc(100% + 96px);
+        margin-left: -48px;
+        justify-content: center;
+        padding:10px 48px;
+    }
+    .header__nav-AIAirsound{
+        flex:0;
+        white-space: nowrap;
+        align-items: center;
+        height: 100%;
+        margin:0;
+    }
     .header__titre{
         font-size: 113px;
         grid-column: 1/span 4;
@@ -720,9 +741,8 @@ canvas {
         grid-column: 1/span 4;
         margin-bottom:96px;
     }
-    p{
-        max-width: 600px;
-    }
+   
+    ///body///
     .btncmd{
         grid-column: 1/span 3;
         height: 75px;
@@ -801,7 +821,6 @@ canvas {
         margin-top: 79px;
         display: block;
     }
-
     .boitierdemo{
         grid-column: 4/span 3;
         grid-row: 4/span 3;
@@ -895,14 +914,9 @@ canvas {
     }
     .boutique__populaire{
     display:block;
-}
-    .inséparable{
-        font-weight: 300;
-        font-size: 20px;
-        display: flex;
-        justify-self: center;
-        margin-top:6px;
     }
+
+    ///footer///
     .footer__marque{
         grid-column: 1/span 3;
         justify-self: flex-start;
@@ -944,6 +958,7 @@ canvas {
         text-align: start;
     }
 }
+//////tablette//////
 @media (min-width: 500px) and (max-width: 1024px) {
     p {
         max-width: 535px;

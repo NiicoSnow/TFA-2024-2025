@@ -5,7 +5,8 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
-// ============ MENU (optionnel, safe) ============
+// ============ MENU ============
+//j'ai repris la base de ma nav sur mon ancien projet + j'ai eu l'aide d'une IA pour l'améliorer
 (function initMenu() {
   const menu     = document.querySelector(".header__nav");
   const menuBtn  = document.querySelector(".menu__btn");
@@ -50,17 +51,17 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
   });
 })();
 
-// ============ ANCRAGES SMOOTH (optionnel, safe) ============
+// ============ ANCRAGES SMOOTH ============
+//J'ai demandé l'aide d'une IA pour faire des ancrages
 (function initAnchors() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const href = anchor.getAttribute('href');
 
-      // Si c'est juste "#", on ne fait rien
       if (href === "#") return;
 
       const target = document.querySelector(href);
-      if (!target) return; // si l’ancre n’existe pas, comportement normal
+      if (!target) return;
 
       e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth' });
@@ -69,9 +70,10 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 })();
 
 // ============ PARALLAXE ============
+//j'ai demandé de l'aide à une IA pour faire le fond en parallax
 (function initParallax() {
   const bg = document.querySelector('.parallax-bg');
-  if (!bg) return; // pas de calque => on sort
+  if (!bg) return;
 
   const PARALLAX_FACTOR = 0.02;
   let ticking = false;
@@ -94,6 +96,7 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 })();
 
 // ============ CARTES / BOUTONS ============
+//j'ai demandé de l'aide à une IA pour les boutons et leur adaptations
 const DESKTOP_BREAKPOINT = 1025;
 const isDesktop = () => window.innerWidth >= DESKTOP_BREAKPOINT;
 
@@ -134,9 +137,9 @@ function wireUp() {
 wireUp();
 window.addEventListener('resize', () => wireUp());
 
-// ————— PARALLAX STARS (couches + vitesses par étoile) —————
+// ============ PARALLAX STARS ============
+//j'ai demandé de l'aide à une IA pour faire les étoiles
 (function initParallaxStars() {
-  // 1) Crée le conteneur (une seule fois)
   let container = document.querySelector('.parallax-stars');
   if (!container) {
     container = document.createElement('div');
@@ -144,14 +147,12 @@ window.addEventListener('resize', () => wireUp());
     document.body.appendChild(container);
   }
 
-  // 2) Paramètres
   const LAYERS = [
     { count: 75, speed: 0.012, size: [2, 3] },  // arrière-plan
     { count: 50, speed: 0.025, size: [4, 5] },  // milieu
     { count: 25, speed: 0.050, size: [6, 12] },  // avant-plan
   ];
 
-  // 3) Génère les couches + étoiles (vitesse individuelle par étoile)
   const layers = LAYERS.map(cfg => {
     const layer = document.createElement('div');
     layer.className = 'parallax-stars__layer';
@@ -166,14 +167,11 @@ window.addEventListener('resize', () => wireUp());
       star.style.width  = `${size}px`;
       star.style.height = `${size}px`;
 
-      // position aléatoire (légèrement hors viewport pour éviter les bords vides)
       star.style.left = `${Math.random() * 102 - 1}%`;
       star.style.top  = `${Math.random() * 102 - 1}%`;
 
-      // vitesse PAR ÉTOILE (autour de la vitesse de la couche)
       star.dataset.speed = String(cfg.speed * (0.6 + Math.random() * 0.8));
 
-      // variations subtiles
       star.style.opacity = (0.6 + Math.random() * 0.4).toFixed(2);
       if (Math.random() < 0.25) star.style.filter = 'blur(0.5px)';
 
@@ -182,7 +180,6 @@ window.addEventListener('resize', () => wireUp());
     return layer;
   });
 
-  // 4) Scroll handler — anime chaque étoile individuellement
   let ticking = false;
   function update() {
     const y = window.scrollY;
@@ -207,24 +204,21 @@ window.addEventListener('resize', () => wireUp());
   window.addEventListener('scroll', onScroll, { passive: true });
   update();
 
-  // utilitaire
   function rand(min, max) { return Math.random() * (max - min) + min; }
 })();
 
-// --- curseur custom ---
+// ============ curseur custom ============
+//j'ai demandé de l'aide à une IA pour faire le curseur personnalisé
 const cursor = document.getElementById('custom-cursor');
 
-// suit la souris
 window.addEventListener('mousemove', (e) => {
   cursor.style.left = e.clientX + 'px';
   cursor.style.top  = e.clientY + 'px';
 });
 
-// sélecteur de tout ce qui est cliquable (ajoute tes classes si besoin)
 const CLICKABLE_SEL = 'a, button, [role="button"], .bouton, .menu__btn, input[type="button"], input[type="submit"]';
 const isClickable = (el) => !!el.closest(CLICKABLE_SEL);
 
-// 🔁 DÉLÉGATION : marche pour tout (même éléments ajoutés dynamiquement)
 document.addEventListener('mouseover', (e) => {
   cursor.classList.toggle('link-hover', isClickable(e.target));
 });
@@ -232,7 +226,6 @@ document.addEventListener('mouseout', (e) => {
   if (isClickable(e.target)) cursor.classList.remove('link-hover');
 });
 
-// accessibilité clavier (Tab sur un “faux bouton”)
 document.addEventListener('focusin', (e) => {
   if (isClickable(e.target)) cursor.classList.add('link-hover');
 });
