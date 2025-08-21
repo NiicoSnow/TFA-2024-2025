@@ -6,14 +6,37 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 //j'ai repris ceci de mon site Janus où j'avais eu besoin d'aide d'une IA
-const menu = document.querySelector(".header__nav");
-const menuBtn = document.querySelector(".menu__btn");
-const blurOverlay = document.querySelector(".blur-overlay");
+  const menu     = document.querySelector(".header__nav");
+  const menuBtn  = document.querySelector(".menu__btn");
+  const overlay  = document.querySelector(".blur-overlay");
 
-menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("menu--open");
-    blurOverlay.classList.toggle("hidden");
-});
+  const openMenu = () => {
+    menu.classList.add("menu--open");
+    overlay.classList.remove("hidden");
+    menuBtn.setAttribute("aria-expanded", "true");
+  };
+
+  const closeMenu = () => {
+    menu.classList.remove("menu--open");
+    overlay.classList.add("hidden");
+    menuBtn.setAttribute("aria-expanded", "false");
+  };
+
+  menuBtn.addEventListener("click", () => {
+    if (menu.classList.contains("menu--open")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  overlay.addEventListener("click", closeMenu);
+
+  menu.addEventListener("click", (e) => {
+    if (e.target.closest(".menu__link")) {
+      closeMenu();
+    }
+  });
 
 //J'ai eu besoin d'une IA pour faire le carrousel
 const carousel = document.querySelector('.avis');

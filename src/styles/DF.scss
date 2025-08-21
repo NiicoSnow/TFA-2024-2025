@@ -190,13 +190,13 @@ h3 {
     filter: drop-shadow(0 0px 1px #ffffff);
 }
 .icons__panier:hover{
-    filter: drop-shadow(0 0px 5px #01DBE8);
+    filter: drop-shadow(0 0px 5px #0083c0);
 }
 .icons__profil:hover{
-    filter: drop-shadow(0 0px 5px #01DBE8);
+    filter: drop-shadow(0 0px 5px #0083c0);
 }
 .icons__flag:hover{
-    filter: drop-shadow(0 0px 5px #01DBE8);
+    filter: drop-shadow(0 0px 5px #0083c0);
 }
 .btncmd{
     background-color: $bleu;
@@ -215,14 +215,19 @@ h3 {
     cursor: pointer;
 }
 .btncmd:hover{
-    background-color: #00b6c0;
+    background-color: #0083c0;
 }
 .btndécouvrir{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
     text-decoration: none;
-    color: $bleu;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 48px;
+    color: cyan;
+    font-weight: bold;
+}
+.btndécouvrir__arrow{
+    margin-top:-12px ;
+    font-size: 28px;
 }
 .écouteurdémo {
     width: 150%;
@@ -267,7 +272,10 @@ canvas {
     width: 150%;
     display: flex;
     justify-self: center;
+    -webkit-mask-image: linear-gradient(to bottom, $noir 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, $noir 90%, transparent 100%);
 }
+
 .Bigévidence{
     font-size: 28px;
     font-weight: 700;
@@ -401,7 +409,7 @@ canvas {
     padding: 0 0.5rem;
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     pointer-events: auto;
 }
@@ -478,7 +486,7 @@ canvas {
     transition: background-color 0.3s ease;
 }
 .boutique__btnpanier:hover{
-    background-color: #00b6c0;
+    background-color: #0083c0;
 }
 .boutique__barre {
     height: 5px;
@@ -537,7 +545,7 @@ canvas {
     transition: background-color 0.3s ease;
 }
 .boutique__btnpanier-petiteboutique:hover{
-    background-color: #00b6c0;
+    background-color: #0083c0;
 }
 .boutique__image-boitier{
     width: 50%;
@@ -791,7 +799,9 @@ canvas {
         flex-direction: column;
         justify-content: space-between;
         margin-top: 79px;
+        display: block;
     }
+
     .boitierdemo{
         grid-column: 4/span 3;
         grid-row: 4/span 3;
