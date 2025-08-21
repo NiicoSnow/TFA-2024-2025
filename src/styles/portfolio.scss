@@ -7,9 +7,7 @@ $deuxieme:#1e1e35;
 $troisieme:#272743;
 $quatrieme: #404072;
 $texte:#F0F0F0;
-html, body,.lien__bouton,a{
-    cursor: none;
-}
+
 body{
     font-family: "Exo 2", sans-serif;
     font-size: 20px;
@@ -592,6 +590,9 @@ p{
     padding-bottom: 24px;
 }
 @media (min-width: 1025px) {
+    html, body,.lien__bouton,a{
+    cursor: none;
+    }
     .grid{
         grid-template-columns:repeat(9, 1fr) ;
         column-gap: 24px;
