@@ -238,3 +238,8 @@ document.addEventListener('focusin', (e) => {
 });
 document.addEventListener('focusout', () => cursor.classList.remove('link-hover'));
 
+const btn = document.getElementById("btnTop");
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });

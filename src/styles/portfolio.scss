@@ -405,6 +405,10 @@ p{
 }
 .footer__texte{
     margin-bottom: 12px;
+    color: $texte;
+}
+#btnTop{
+    display: none;
 }
 ////////////////////////////////////
 ///////////case study//////////////
@@ -590,9 +594,52 @@ p{
     padding-bottom: 24px;
 }
 @media (min-width: 1025px) {
-    html, body,.lien__bouton,a{
+    html, body,.lien__bouton,a,#btnTop{
     cursor: none;
     }
+    
+    #btnTop {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        display: block;
+        background-color: $quatrieme;
+        color: white;
+        border: none;
+        padding: 12px 16px;
+        font-size: 20px;
+        transition: transform 0.3s ease;
+        z-index: 3;
+    }
+
+    #btnTop:hover {
+        scale:1.1;
+    }
+
+    ::-webkit-scrollbar {
+        width: 12px;              /* largeur de la barre verticale */
+        height: 12px;             /* hauteur de la barre horizontale */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: $deuxieme;      /* couleur du "rail" */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #5b5ba1; /* couleur du "pouce" */
+        border-radius: 6px;        /* arrondi */
+        border: 3px solid $deuxieme; /* espace autour */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: $quatrieme; /* couleur au survol */
+    }
+
+    * {
+        scrollbar-width: thin;            /* "auto" | "thin" */
+        scrollbar-color: #5b5ba1 $deuxieme; /* pouce | rail */
+    }
+
     .grid{
         grid-template-columns:repeat(9, 1fr) ;
         column-gap: 24px;
